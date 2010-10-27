@@ -1,5 +1,5 @@
 <?php
-	$db = @mysqli_connect('localhost', 'restaurantuser', 'restaurants', 'restaurants');
+	$db = @mysqli_connect('localhost', 'user', 'Restaurants', 'Restaurants');
 
 	$table = 'RestaurantInfo';
 	

@@ -1,20 +1,18 @@
 <?php
-include "db_connect.php";
+
+include("header.php");
+
+echo("<center>
+<p><b>The Homepage Text Goes Here</b></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</center>");
+
+include("footer.php");
+
+exit;
 ?>
-
-<HTML>
-
-<style  TYPE="text/css">
-    BODY {
-	Background-color: #000000;
-}
-</style>
-
-<BODY>
-<CENTER>
-
-Welcome to the Restaurant Recommendation Website!
-
-</CENTER>
-</BODY>
-</HTML>
