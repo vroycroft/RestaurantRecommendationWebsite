@@ -64,11 +64,11 @@ INSERT INTO `Restaurants`.`RestaurantInfo` (`name`, `street_address`, `city`, `s
 ('La Petite Auberge', '311 William Street', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4.0, 4, 'http://www.lapetiteaubergefredericksburg.com', 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 1, 0),
 ('McDonalds', '1212 Jefferson Davis Highway', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 3.0, 1, 'http://www.mcdonalds.com', 0, 1, 1, 0, 1, 0, 1, 1, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
 ('Olde Towne Steak & Seafood', '1612 Caroline Street', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 3.5, 4, 'http://www.oldetownesteakandseafood.com', 0, 1, 1, 1, 0, 0, 1, 0, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4), 
-(‘Pancho Villa Mexican Restaurant', '2931 Plank Road', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4.0, 2, 'http://www.panchovilla.com', 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 2, 0),
-(‘Parthenon Restaurant', '2024 Augustine Avenue', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4.0, 2, 'not applicable', 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 2, 0),
+('Pancho Villa Mexican Restaurant', '2931 Plank Road', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4.0, 2, 'http://www.panchovilla.com', 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 2, 0),
+('Parthenon Restaurant', '2024 Augustine Avenue', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4.0, 2, 'not applicable', 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 2, 0),
 ('Renato Italian Restaurant', '422 William Street', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4.0, 3, 'http://www.ristoranterenato.com', 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 3, 0),
 ('Sakura Japanese Steak House', '4540 Plank Road', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4.0, 3, 'http://www.sakurasteakhouse.com', 0, 0, 1, 1, 0, 0, 1, 0, 4, 1, 0, 3, 0, 0, 3, 0, 0, 0, 0, 0, 0), 
-('Sammy Ts', '801 Caroline Street’, 'Fredericksburg', 'VA', '22401', 'default.jpeg', 3.5, 2, 'http://www.sammyts.com', 0, 1, 1, 0, 1, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0),
+('Sammy Ts', '801 Caroline Street', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 3.5, 2, 'http://www.sammyts.com', 0, 1, 1, 0, 1, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0),
 ('TruLuvs - A Modern American Bistro', '1101 Sophia Street', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 3.5, 2, 'http://www.truluvs.com', 0, 0, 1, 1, 1, 1, 0, 0, 3, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 ('Vinnys Italian Grill & Pizzeria', '201 Kings Highway', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4.0, 2, 'http://www.fredericksburgpizza.com', 0, 1, 1, 0, 0, 0, 1, 0, 0, 4, 0, 0, 4, 0, 0, 0, 0, 0, 0, 1, 0);
 
