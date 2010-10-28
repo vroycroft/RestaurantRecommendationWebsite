@@ -1,5 +1,49 @@
 <?php
 
+include "db_connect.php"; 
+
+$query = "SELECT name, price, delivery, takeout, accommodate_groups,
+reservations, outside_seating, bar, kids, fast_food,
+steakhouse_influence, american_influence, middle_eastern_influence,
+asian_influence, italian_influence, chinese_influence,
+japanese_influence, indian_influence, french_influence,
+greek_influence, mexican_influence, vegetarian_influence,
+seafood_influence FROM $table;";
+
+$result = mysqli_query($db, $query) 
+		or die("Error Querying Database");
+
+$numOfRestaurants = mysqli_num_rows($result);	
+
+echo "<li>$numOfRestaurants</li>";
+
+$restaurantVectors[] = array();
+
+if ($numOfRestaurants == 0) {
+	echo "<h1>No results matched your search!</h1>";
+} else {
+ 
+//$i = 0;
+for($i=0; $i<$numOfRestaurants; ++$i) {
+$restaurantVectors[$i] = mysqli_fetch_array($result);
+
+echo "<li>{$restaurantVectors[$i]['name']}</li>";
+
+//populate the restaurant vectors array
+//$restaurantVectors[$i][0] = $row['name'];
+//$restaurantVectors[$i][1] = $row['price'];
+//$restaurantVectors[$i][2] = $row['delivery'];
+
+//$i = $i + 1;
+
+//echo "<li>{$restaurantVectors[$i][0]}</li>";
+}
+
+
+
+
+}
+
 // Menu Background Function
 function bgtype($pagename) {
 $filename = $_SERVER['REQUEST_URI'];
@@ -53,8 +97,8 @@ function hoveroff(cell) {
   </tr>
   <tr>
     <td width="720" height="50" background="searchbar.jpg" align="center">
-    <form style="margin:0px" action="index.php" method="post">
-    <input type="text" name="searchfor">
+    <form style="margin:0px" action="restaurantSearch.php" method="post">
+    <input type="text" name="searchRestaurant">
     <input type="submit" value="GO">
     </form>    
     </td>
