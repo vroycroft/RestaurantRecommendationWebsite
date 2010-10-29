@@ -23,20 +23,14 @@ if ($numOfRestaurants == 0) {
 	echo "<h1>No results matched your search!</h1>";
 } else {
  
-//$i = 0;
 for($i=0; $i<$numOfRestaurants; ++$i) {
+
 $restaurantVectors[$i] = mysqli_fetch_array($result);
+
 
 echo "<li>{$restaurantVectors[$i]['name']}</li>";
 
-//populate the restaurant vectors array
-//$restaurantVectors[$i][0] = $row['name'];
-//$restaurantVectors[$i][1] = $row['price'];
-//$restaurantVectors[$i][2] = $row['delivery'];
 
-//$i = $i + 1;
-
-//echo "<li>{$restaurantVectors[$i][0]}</li>";
 }
 
 
@@ -55,6 +49,8 @@ if (stristr($filename, $pagename) !== FALSE) {
 
 }
 // End Menu Background Function
+
+mysqli_close($db); 
 
 ?>
 <html>
