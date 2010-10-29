@@ -1,5 +1,6 @@
 <?php 
 include "db_connect.php"; 
+include("header.php");
 
 	$restaurant = mysqli_real_escape_string($db, trim($_POST['searchRestaurant'])); 
 	$query = "SELECT * FROM $table WHERE 
@@ -33,6 +34,17 @@ echo "<li>$zip</li>";
 echo "<li>$average_user_rating</li>";
 echo "<li>$website</li>";
 echo "<li>$delivery</li>";
+
+for($i=0; $i<$numOfRestaurants; ++$i) {
+
+if(ucfirst(searchRestaurant) == $restaurantVectors[$i]['name'])
+{
+	echo"<li>found<li>";
+}
+
+
+
+}
 
 }
 }
