@@ -1,43 +1,5 @@
 <?php
 
-include "db_connect.php"; 
-
-$query = "SELECT name, price, delivery, takeout, accommodate_groups,
-reservations, outside_seating, bar, kids, fast_food,
-steakhouse_influence, american_influence, middle_eastern_influence,
-asian_influence, italian_influence, chinese_influence,
-japanese_influence, indian_influence, french_influence,
-greek_influence, mexican_influence, vegetarian_influence,
-seafood_influence FROM $table;";
-
-$result = mysqli_query($db, $query) 
-		or die("Error Querying Database");
-
-$numOfRestaurants = mysqli_num_rows($result);	
-
-echo "<li>$numOfRestaurants</li>";
-
-$restaurantVectors[] = array();
-
-if ($numOfRestaurants == 0) {
-	echo "<h1>No results matched your search!</h1>";
-} else {
- 
-for($i=0; $i<$numOfRestaurants; ++$i) {
-
-$restaurantVectors[$i] = mysqli_fetch_array($result);
-
-
-echo "<li>{$restaurantVectors[$i]['name']}</li>";
-
-
-}
-
-
-
-
-}
-
 // Menu Background Function
 function bgtype($pagename) {
 $filename = $_SERVER['REQUEST_URI'];
@@ -50,8 +12,6 @@ if (stristr($filename, $pagename) !== FALSE) {
 }
 // End Menu Background Function
 
-mysqli_close($db); 
-
 ?>
 <html>
 <head>
@@ -59,7 +19,7 @@ mysqli_close($db);
 
 <style  TYPE="text/css">
     BODY {
-	Background-color: #ffffff;
+	Background-color: #C0C9D0;
 	background-image: url(background.jpg);
 	background-repeat:repeat-x; 
 	background-position:top;
@@ -93,8 +53,8 @@ function hoveroff(cell) {
   </tr>
   <tr>
     <td width="720" height="50" background="searchbar.jpg" align="center">
-    <form style="margin:0px" action="restaurantSearch.php" method="post">
-    <input type="text" name="searchRestaurant">
+    <form style="margin:0px" action="index.php" method="post">
+    <input type="text" name="searchfor">
     <input type="submit" value="GO">
     </form>    
     </td>
