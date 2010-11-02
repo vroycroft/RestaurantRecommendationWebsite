@@ -19,7 +19,7 @@ if (stristr($filename, $pagename) !== FALSE) {
 
 <style  TYPE="text/css">
     BODY {
-	Background-color: #C0C9D0;
+	Background-color: #C0C4CD;
 	background-image: url(background.jpg);
 	background-repeat:repeat-x; 
 	background-position:top;
@@ -34,7 +34,7 @@ a:hover      { color: blue; text-decoration: underline;}
 
 </head>
 
-<body bgcolor="skyblue" topmargin="0">
+<body topmargin="0">
 
 <script language="JavaScript">
 <!--
