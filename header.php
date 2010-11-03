@@ -1,5 +1,7 @@
 <?php
 
+
+
 // Menu Background Function
 function bgtype($pagename) {
 $filename = $_SERVER['REQUEST_URI'];
@@ -12,6 +14,8 @@ if (stristr($filename, $pagename) !== FALSE) {
 }
 // End Menu Background Function
 
+ 
+
 ?>
 <html>
 <head>
@@ -19,7 +23,7 @@ if (stristr($filename, $pagename) !== FALSE) {
 
 <style  TYPE="text/css">
     BODY {
-	Background-color: #C0C4CD;
+	Background-color: #ffffff;
 	background-image: url(background.jpg);
 	background-repeat:repeat-x; 
 	background-position:top;
@@ -34,7 +38,7 @@ a:hover      { color: blue; text-decoration: underline;}
 
 </head>
 
-<body topmargin="0">
+<body bgcolor="skyblue" topmargin="0">
 
 <script language="JavaScript">
 <!--
@@ -53,8 +57,8 @@ function hoveroff(cell) {
   </tr>
   <tr>
     <td width="720" height="50" background="searchbar.jpg" align="center">
-    <form style="margin:0px" action="index.php" method="post">
-    <input type="text" name="searchfor">
+    <form style="margin:0px" action="restaurantSearch.php" method="post">
+    <input type="text" name="searchRestaurant">
     <input type="submit" value="GO">
     </form>    
     </td>
