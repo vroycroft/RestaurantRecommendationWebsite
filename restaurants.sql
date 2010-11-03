@@ -77,3 +77,24 @@ INSERT INTO `Restaurants`.`RestaurantInfo` (`name`, `street_address`, `city`, `s
 ('Vinnys Italian Grill & Pizzeria', '201 Kings Highway', 'Fredericksburg', 'VA', '22401', 'Vinnys.jpg', 4.0, 2, 'http://www.fredericksburgpizza.com', 0, 1, 1, 0, 0, 0, 1, 0, 0, 4, 0, 0, 4, 0, 0, 0, 0, 0, 0, 1, 0);
 
 -- --------------------------------------------------------
+
+
+--
+-- Table structure for table `Users`
+--
+
+CREATE TABLE IF NOT EXISTS `Restaurants`.`Users` (
+  `user_id` smallint(6) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(16) NOT NULL,
+  PRIMARY KEY (`user_id`)
+); 
+
+--
+-- Dumping data for table `Users`
+--
+
+INSERT INTO `Restaurants`.`Users` (`first_name`, `last_name`, `username`, `password`) VALUES
+('Vanessa', 'Roycroft', 'vr', 'vr');
