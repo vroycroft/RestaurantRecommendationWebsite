@@ -52,11 +52,11 @@ CREATE TABLE IF NOT EXISTS `Restaurants`.`RestaurantInfo` (
 
 INSERT INTO `Restaurants`.`RestaurantInfo` (`name`, `street_address`, `city`, `state`, `zip`, `image`, `average_user_rating`, `price`, `website`, `delivery`, `takeout`, `accommodate_groups`, `reservations`, `outside_seating`, `bar`, `kids`, `fast_food`, `steakhouse_influence`, `american_influence`, `middle_eastern_influence`, `asian_influence`, `italian_influence`, `chinese_influence`, `japanese_influence`, `indian_influence`, `french_influence`, `greek_influence`, `mexican_influence`, `vegetarian_influence`, `seafood_influence`) VALUES
 ('Aladin', '2032 Plank Road', 'Fredericksburg', 'VA', '22401', 'Aladin.bmp', 4.0, 2, 'not applicable', 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
-('Asia Cafe', '840 Warrenton Road', 'Fredericksburg', 'VA', '22406', 'Asia_Cafe.jpeg', 3.5, 2, 'not applicable', 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 4, 0, 4, 4, 0, 0, 0, 0, 0, 0),
-('Burger King', '3052 Plank Road', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 3.0, 1, 'http://www.burgerking.com', 0, 1, 1, 0, 0, 0, 1, 1, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
-('Chick-fil-A', '9900 Southpoint Parkway', 'Fredericksburg', 'VA', '22407', 'default.jpeg', 4.0, 1, 'http://www.chick-fil-a.com', 0, 1, 1, 0, 0, 0, 1, 1, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('Chipotle', '3051 Plank Rd', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4, 3, 'www.chipotle.com', 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 0),
-('El Charro', '4611 Southpoint Parkway', 'Fredericksburg', 'VA', '22408', 'default.jpeg', 3.0, 2, 'not applicable', 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 1),
+('Asia Cafe', '840 Warrenton Road', 'Fredericksburg', 'VA', '22406', 'Asia_Cafe.jpg', 3.5, 2, 'not applicable', 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 4, 0, 4, 4, 0, 0, 0, 0, 0, 0),
+('Burger King', '3052 Plank Road', 'Fredericksburg', 'VA', '22401', 'Burger_King.jpg', 3.0, 1, 'http://www.burgerking.com', 0, 1, 1, 0, 0, 0, 1, 1, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
+('Chick-fil-A', '9900 Southpoint Parkway', 'Fredericksburg', 'VA', '22407', 'Chick_Fil_A2.jpg', 4.0, 1, 'http://www.chick-fil-a.com', 0, 1, 1, 0, 0, 0, 1, 1, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('Chipotle', '3051 Plank Rd', 'Fredericksburg', 'VA', '22401', 'Chipotle2.jpg', 4, 3, 'www.chipotle.com', 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 0),
+('El Charro', '4611 Southpoint Parkway', 'Fredericksburg', 'VA', '22408', 'El_Charro.jpg', 3.0, 2, 'not applicable', 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 1),
 ('Firebirds Wood Fired Grill', '1 Towne Center Boulevard', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4.0, 3, 'http://www.firebirdsrestaurants.com', 0, 1, 1, 1, 1, 1, 1, 0, 5, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 ('Fu Kien Gourmet', '435 Jefferson Davis Highway', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 3.5, 1, 'not applicable', 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 3, 0, 5, 0, 0, 0, 0, 0, 2, 0),
 ('Glory Days', '9969 Jefferson Davis Hwy', 'Fredericksburg', 'VA', '22407', 'default.jpeg', 3.5, 3, 'http://www.glorydaysgrill.com/', 0, 1, 1, 0, 1, 1, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0),
