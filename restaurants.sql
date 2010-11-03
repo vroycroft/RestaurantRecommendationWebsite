@@ -51,8 +51,8 @@ CREATE TABLE IF NOT EXISTS `Restaurants`.`RestaurantInfo` (
 --
 
 INSERT INTO `Restaurants`.`RestaurantInfo` (`name`, `street_address`, `city`, `state`, `zip`, `image`, `average_user_rating`, `price`, `website`, `delivery`, `takeout`, `accommodate_groups`, `reservations`, `outside_seating`, `bar`, `kids`, `fast_food`, `steakhouse_influence`, `american_influence`, `middle_eastern_influence`, `asian_influence`, `italian_influence`, `chinese_influence`, `japanese_influence`, `indian_influence`, `french_influence`, `greek_influence`, `mexican_influence`, `vegetarian_influence`, `seafood_influence`) VALUES
-('Aladin', '2032 Plank Road', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4.0, 2, 'not applicable', 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
-('Asia Cafe', '840 Warrenton Road', 'Fredericksburg', 'VA', '22406', 'default.jpeg', 3.5, 2, 'not applicable', 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 4, 0, 4, 4, 0, 0, 0, 0, 0, 0),
+('Aladin', '2032 Plank Road', 'Fredericksburg', 'VA', '22401', 'Aladin.bmp', 4.0, 2, 'not applicable', 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
+('Asia Cafe', '840 Warrenton Road', 'Fredericksburg', 'VA', '22406', 'Asia_Cafe.jpeg', 3.5, 2, 'not applicable', 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 4, 0, 4, 4, 0, 0, 0, 0, 0, 0),
 ('Burger King', '3052 Plank Road', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 3.0, 1, 'http://www.burgerking.com', 0, 1, 1, 0, 0, 0, 1, 1, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
 ('Chick-fil-A', '9900 Southpoint Parkway', 'Fredericksburg', 'VA', '22407', 'default.jpeg', 4.0, 1, 'http://www.chick-fil-a.com', 0, 1, 1, 0, 0, 0, 1, 1, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 ('Chipotle', '3051 Plank Rd', 'Fredericksburg', 'VA', '22401', 'default.jpeg', 4, 3, 'www.chipotle.com', 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 0),
