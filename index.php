@@ -2,7 +2,6 @@
 
 include("header.php");
 
-include "db_connect.php";
 ?>
 
 <HTML>
@@ -33,11 +32,9 @@ echo "<li>$name</li>";
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-</center>");
+</center>
 
+<?php
 include("footer.php");
-
-mysqli_close($db); 
-
 exit;
 ?>

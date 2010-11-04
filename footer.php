@@ -17,3 +17,11 @@
 <p>&nbsp;</p>
 </body>
 </html>
+<?php
+
+// Close the db connection if open
+if (isset($db)) {
+	mysqli_close($db);
+}
+
+?>

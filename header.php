@@ -1,6 +1,6 @@
 <?php
 
-
+include "db_connect.php";
 
 // Menu Background Function
 function bgtype($pagename) {
@@ -75,11 +75,11 @@ function hoveroff(cell) {
 
 <!-- Main Menu -->
 <table border=1 bordercolor=gray cellpadding=3 cellspacing=0 width="150">
-<tr><td align=center <? bgtype("/index.php"); ?>>&nbsp;&nbsp;<a href="index.php">Home</a>&nbsp;&nbsp;</td></tr></tr>
-<tr><td align=center <? bgtype("/page1.php"); ?>>&nbsp;&nbsp;<a href="index.php">Page1</a>&nbsp;&nbsp;</td></tr>
-<tr><td align=center <? bgtype("/page2.php"); ?>>&nbsp;&nbsp;<a href="index.php">Page2</a>&nbsp;&nbsp;</td></tr>
-<tr><td align=center <? bgtype("/page3.php"); ?>>&nbsp;&nbsp;<a href="index.php">Page3</a>&nbsp;&nbsp;</td></tr>
-<tr><td align=center <? bgtype("/page4.php"); ?>>&nbsp;&nbsp;<a href="index.php">Page4</a>&nbsp;&nbsp;</td></tr>
+<tr><td align=center <?php bgtype("/index.php"); ?>>&nbsp;&nbsp;<a href="index.php">Home</a>&nbsp;&nbsp;</td></tr></tr>
+<tr><td align=center <?php bgtype("/login.php"); ?>>&nbsp;&nbsp;<a href="login.php">Login</a>&nbsp;&nbsp;</td></tr>
+<tr><td align=center <?php bgtype("/signup.php"); ?>>&nbsp;&nbsp;<a href="signup.php">Signup</a>&nbsp;&nbsp;</td></tr>
+<tr><td align=center <?php bgtype("/page3.php"); ?>>&nbsp;&nbsp;<a href="index.php">Page3</a>&nbsp;&nbsp;</td></tr>
+<tr><td align=center <?php bgtype("/page4.php"); ?>>&nbsp;&nbsp;<a href="index.php">Page4</a>&nbsp;&nbsp;</td></tr>
 </table>
 <!-- End Main Menu -->
 

@@ -1,5 +1,5 @@
 <?php 
-include "db_connect.php"; 
+
 include ("header.php"); 
 
 $query = "SELECT name, price, delivery, takeout, accommodate_groups,
@@ -210,9 +210,6 @@ for($n=0; $n<$numOfRestaurants; ++$n)
 
 }
 
-
-
-
-
-mysqli_close($db); 
+include("footer.php");
+ 
 ?>
