@@ -23,7 +23,7 @@ if (stristr($filename, $pagename) !== FALSE) {
 
 <style  TYPE="text/css">
     BODY {
-	Background-color: #ffffff;
+	Background-color: #C0C4CD;
 	background-image: url(background.jpg);
 	background-repeat:repeat-x; 
 	background-position:top;
@@ -38,7 +38,7 @@ a:hover      { color: blue; text-decoration: underline;}
 
 </head>
 
-<body bgcolor="skyblue" topmargin="0">
+<body topmargin="0">
 
 <script language="JavaScript">
 <!--
@@ -70,8 +70,8 @@ function hoveroff(cell) {
           <tr>
             <td align="center" background="body.jpg">
             <table width="700" border="0" cellpadding="5" cellspacing="0">
-            <tr><td align="left" width="150">              
-
+            <tr><td align="left" valign="top" width="150">              
+            <br /><br /><br />
 
 <!-- Main Menu -->
 <table border=1 bordercolor=gray cellpadding=3 cellspacing=0 width="150">
