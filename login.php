@@ -13,7 +13,7 @@ if ($_GET['login'] == "yes") {
 <center>
 <p><b>Login</b></p>
 
-<form action="login.php?login=yes" method="post">
+<form action="userProfile.php" method="post">
 <table border="0" cellpadding="3" cellspacing="0">
 <tr><td align="right"><b>Username: </b></td><td align="left"><input type="text" name="username" value=""></td</tr>
 <tr><td align="right"><b>Password: </b></td><td align="left"><input type="password" name="password" value=""></td</tr>
