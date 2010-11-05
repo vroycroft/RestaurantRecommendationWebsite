@@ -16,7 +16,7 @@ if ($_GET['signup'] == "yes") {
 		$errormess = "Your must fill in all the fields";
 	}
 
-	// Check If Email Exists
+	// Check If username Exists
 	$checkexists = mysqli_query($db, "Select COUNT(*) AS num from `Users` where username='$username'");
 	$exists = mysqli_fetch_array($checkexists);
 	if ($exists['num'] > 0) {
@@ -26,7 +26,7 @@ if ($_GET['signup'] == "yes") {
 
 	if ($errormess == "") {
 		@mysqli_query($db, "Insert into `Users` (first_name, last_name, username, password) values ('$first_name', '$last_name', '$username', '$password')");
-		echo("Account created successfully.");
+		echo("Account created successfully. <p><a href='login.php'>Login</a> to get started!</p>");
 		include("footer.php");
 		exit;
 	} else {
