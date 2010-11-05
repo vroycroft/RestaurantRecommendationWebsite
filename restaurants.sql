@@ -66,6 +66,7 @@ INSERT INTO `Restaurants`.`RestaurantInfo` (`name`, `street_address`, `city`, `s
 ('Fu Kien Gourmet', '435 Jefferson Davis Highway', 'Fredericksburg', 'VA', '22401', 'Fu_Kien.bmp', 3.5, 1, 'not applicable', 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 3, 0, 5, 0, 0, 0, 0, 0, 2, 0),
 ('Glory Days', '9969 Jefferson Davis Highway', 'Fredericksburg', 'VA', '22407', 'Glory_Days_Grill.jpg', 3.5, 3, 'http://www.glorydaysgrill.com/', 0, 1, 1, 0, 1, 1, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0),
 ('Great China', '1340 Central Park Boulevard', 'Fredericksburg', 'VA', '22401', 'Great_China.jpg', 3.0, 1, 'not applicable', 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 4, 0, 4, 0, 0, 0, 0, 0, 1, 0),
+('Guru Indian Cuisine', '1320 Central Park Boulevard', 'Fredericksburg', 'VA', '22401', 'default.jpg', 2.5, 2, 'http://guruindiancuisine.com', 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 1, 0),
 ('Hard Times Cafe', '314 Jefferson Davis Highway', 'Fredericksburg', 'VA', '22401', 'Hard_Times.jpg', 4.5, 2, 'http://www.hardtimes.com', 0, 1, 1, 0, 0, 1, 1, 0, 1, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0),
 ('India Queen Restaurant', '1964 William Street', 'Fredericksburg', 'VA', '22401', 'India_Queen.jpg', 4.0, 2, 'not applicable', 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 1, 0),
 ('Laziza', '4256 Plank Road', 'Fredericksburg', 'VA', '22407', 'Laziza.jpg', 4.0, 2, 'http://www.lazizaoffredericksburg.com', 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
