@@ -60,7 +60,7 @@ INSERT INTO `Restaurants`.`RestaurantInfo` (`name`, `street_address`, `city`, `s
 ('Burger King', '3052 Plank Road', 'Fredericksburg', 'VA', '22401', 'Burger_King.jpg', 3.0, 1, 'http://www.burgerking.com', 0, 1, 1, 0, 0, 0, 1, 5, 1, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
 ('Carlos OKellys Mexican Cafe', '2306 Plank Road', 'Fredericksburg', 'VA', '22401', 'default.jpg', 2.0, 2, 'http://www.carlosokellys.com', 0, 1, 1, 0, 0, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 0),
 ('Chick-fil-A', '9900 Southpoint Parkway', 'Fredericksburg', 'VA', '22407', 'Chick_Fil_A2.jpg', 4.0, 1, 'http://www.chick-fil-a.com', 0, 1, 1, 0, 0, 0, 1, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('Chipotle', '3051 Plank Road', 'Fredericksburg', 'VA', '22401', 'Chipotle2.jpg', 4, 2, 'http://www.chipotle.com', 0, 1, 0, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 0),
+('Chipotle', '3051 Plank Road', 'Fredericksburg', 'VA', '22401', 'Chipotle2.jpg', 4, 1, 'http://www.chipotle.com', 0, 1, 0, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 0),
 ('El Charro', '4611 Southpoint Parkway', 'Fredericksburg', 'VA', '22408', 'El_Charro.jpg', 3.0, 2, 'not applicable', 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 1),
 ('Firebirds Wood Fired Grill', '1 Towne Center Boulevard', 'Fredericksburg', 'VA', '22401', 'Firebirds.bmp', 4.0, 3, 'http://www.firebirdsrestaurants.com', 0, 1, 1, 1, 1, 1, 1, 0, 5, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 ('Five Guys Hamburgers & Fries', '1661 Carl D Silver Parkway', 'Fredericksburg', 'VA', '22401', 'default.jpg', 4.5, 1, 'http://www.fiveguys.com', 0, 1, 1, 0, 0, 0, 1, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
