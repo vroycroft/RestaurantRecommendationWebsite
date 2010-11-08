@@ -159,3 +159,12 @@ INSERT INTO `Restaurants`.`Users` (`first_name`, `last_name`, `username`, `passw
 ('Gary', 'Mills', 'gm', 'gm', 2, 1, 1, 0, 0, 0, 1, 1, 2, 3, 3, 1, 3, 4, 3, 4, 1, 1, 3, 4, 1, 4),
 ('Amy', 'Sams', 'as', 'as', 1, 0, 1, 0, 0, 1, 0, 0, 2, 4, 5, 1, 4, 3, 4, 1, 0, 1, 1, 4, 1, 5),
 ('Josh', 'Abbott', 'ja', 'ja', 1, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5); 
+
+--
+-- Table structure for table `UserRatings`
+--
+
+CREATE TABLE IF NOT EXISTS `Restaurants`.`UserRatings` (
+  `user_id` smallint(6) NOT NULL,
+  `restaurant_id` smallint(6) NOT NULL,
+  `rating` INT NOT NULL);
