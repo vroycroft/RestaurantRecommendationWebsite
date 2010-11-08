@@ -97,12 +97,35 @@ INSERT INTO `Restaurants`.`RestaurantInfo` (`name`, `street_address`, `city`, `s
 -- Table structure for table `Users`
 --
 
+
 CREATE TABLE IF NOT EXISTS `Restaurants`.`Users` (
   `user_id` smallint(6) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `username` varchar(25) NOT NULL,
   `password` varchar(16) NOT NULL,
+  `price` INT NOT NULL,
+  `delivery` INT NOT NULL,
+  `takeout` INT NOT NULL,
+  `accommodate_groups` INT NOT NULL,
+  `reservations` INT NOT NULL,
+  `outside_seating` INT NOT NULL,
+  `bar` INT NOT NULL,
+  `kids` INT NOT NULL,
+  `fast_food` INT NOT NULL,
+  `steakhouse_influence` INT NOT NULL,
+  `american_influence` INT NOT NULL,
+  `middle_eastern_influence` INT NOT NULL,
+  `asian_influence` INT NOT NULL,
+  `italian_influence` INT NOT NULL,
+  `chinese_influence` INT NOT NULL,
+  `japanese_influence` INT NOT NULL,
+  `indian_influence` INT NOT NULL,
+  `french_influence` INT NOT NULL,
+  `greek_influence` INT NOT NULL,
+  `mexican_influence` INT NOT NULL,
+  `vegetarian_influence` INT NOT NULL,
+  `seafood_influence` INT NOT NULL,
   PRIMARY KEY (`user_id`)
 ); 
 
@@ -110,5 +133,29 @@ CREATE TABLE IF NOT EXISTS `Restaurants`.`Users` (
 -- Dumping data for table `Users`
 --
 
-INSERT INTO `Restaurants`.`Users` (`first_name`, `last_name`, `username`, `password`) VALUES
-('Vanessa', 'Roycroft', 'vr', 'vr');
+INSERT INTO `Restaurants`.`Users` (`first_name`, `last_name`, `username`, `password`, `price`,
+  `delivery`,
+  `takeout`,
+  `accommodate_groups`,
+  `reservations`,
+  `outside_seating`,
+  `bar`,
+  `kids`,
+  `fast_food`,
+  `steakhouse_influence`,
+  `american_influence`,
+  `middle_eastern_influence`,
+  `asian_influence`,
+  `italian_influence`,
+  `chinese_influence`,
+  `japanese_influence`,
+  `indian_influence`,
+  `french_influence`,
+  `greek_influence`,
+  `mexican_influence`,
+  `vegetarian_influence`,
+  `seafood_influence`) VALUES
+('Vanessa', 'Roycroft', 'vr', 'vr', 2, 1, 1, 0, 0, 1, 0, 0, 2, 5, 5, 2, 3, 5, 5, 5, 3, 1, 1, 4, 1, 3),
+('Gary', 'Mills', 'gm', 'gm', 2, 1, 1, 0, 0, 0, 1, 1, 2, 3, 3, 1, 3, 4, 3, 4, 1, 1, 3, 4, 1, 4),
+('Amy', 'Sams', 'as', 'as', 1, 0, 1, 0, 0, 1, 0, 0, 2, 4, 5, 1, 4, 3, 4, 1, 0, 1, 1, 4, 1, 5),
+('Josh', 'Abbott', 'ja', 'ja', 1, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5); 
