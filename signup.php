@@ -47,6 +47,12 @@ if ($_GET['signup'] == "yes") {
 <tr><td align="right"><b>Last Name: </b></td><td align="left"><input type="text" name="last_name" value=""></td</tr>
 <tr><td align="right"><b>Username: </b></td><td align="left"><input type="text" name="username" value=""></td</tr>
 <tr><td align="right"><b>Password: </b></td><td align="left"><input type="password" name="password" value=""></td</tr>
+
+<tr><td>How much do you prefer spending per person (on average)?</td></tr>
+<tr><td><input type="radio" name="group1" value="Cheap"> Cheap (Up to $10)</td>
+<td><input type="radio" name="group1" value="Moderate"> Moderate (Up to $30)</td>
+<td><input type="radio" name="group1" value="Expensive"> Expensive (Up to $60)</td>
+
 <tr><td>&nbsp;</td><td align="center"><input type="submit" value="Create Account"></td></tr>
 </table>
 </form>
