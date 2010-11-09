@@ -53,6 +53,43 @@ if ($_GET['signup'] == "yes") {
 <td><input type="radio" name="group1" value="Moderate"> Moderate (Up to $30)</td>
 <td><input type="radio" name="group1" value="Expensive"> Expensive (Up to $60)</td>
 
+<tr><td>Do you prefer a restaurant that offers delivery?</td></tr>
+<tr><td><input type="radio" name="group2" value="yesDelivery"> Yes </td>
+<td><input type="radio" name="group2" value="noDelivery"> No </td>
+
+<tr><td>Do you prefer a restaurant that offers takeout?</td></tr>
+<tr><td><input type="radio" name="group3" value="yesTakeout"> Yes </td>
+<td><input type="radio" name="group3" value="noTakeout"> No </td>
+
+<tr><td>Do you prefer a restaurant that can accommodate groups?</td></tr>
+<tr><td><input type="radio" name="group4" value="yesGroups"> Yes </td>
+<td><input type="radio" name="group4" value="noGroup"> No </td>
+
+<tr><td>Do you prefer a restaurant that accepts reservations?</td></tr>
+<tr><td><input type="radio" name="group5" value="yesReservations"> Yes </td>
+<td><input type="radio" name="group5" value="noReservations"> No </td>
+
+<tr><td>Do you prefer a restaurant that has outside seating?</td></tr>
+<tr><td><input type="radio" name="group6" value="yesOutsideSeating"> Yes </td>
+<td><input type="radio" name="group6" value="noOutsideSeating"> No </td>
+
+<tr><td>Do you prefer a restaurant that has a full bar?</td></tr>
+<tr><td><input type="radio" name="group7" value="yesBar"> Yes </td>
+<td><input type="radio" name="group7" value="noBar"> No </td>
+
+<tr><td>Do you prefer a restaurant that is good for kids?</td></tr>
+<tr><td><input type="radio" name="group8" value="yesKids"> Yes </td>
+<td><input type="radio" name="group8" value="noKids"> No </td>
+
+<tr><td>On a scale of 1 to 5, how fast do you want your service to be?</td></tr>
+<tr><td><input type="radio" name="group9" value="speedOne"> 1 </td>
+<td><input type="radio" name="group9" value="speedTwo"> 2 </td>
+<tr><td><input type="radio" name="group9" value="speedThree"> 3 </td>
+<td><input type="radio" name="group9" value="speedFour"> 4 </td>
+<td><input type="radio" name="group9" value="speedFive"> 5 </td>
+
+
+
 <tr><td>&nbsp;</td><td align="center"><input type="submit" value="Create Account"></td></tr>
 </table>
 </form>
