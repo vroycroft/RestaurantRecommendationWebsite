@@ -85,7 +85,7 @@ INSERT INTO `Restaurants`.`RestaurantInfo` (`name`, `street_address`, `city`, `s
 ('Sammy Ts', '801 Caroline Street', 'Fredericksburg', 'VA', '22401', 'Sammy_Ts.jpg', 3.5, 2, 'http://www.sammyts.com', 0, 1, 1, 0, 1, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0),
 ('Smokey Bones', '1801 Carl D Silver Parkway', 'Fredericksburg', 'VA', '22401', 'smokeybones.jpg', 4, 2, 'http://www.smokeyBones.com', 0, 1, 1, 0, 0, 1, 1, 1, 2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2),
 ('Taco Bell', '543 Jefferson Davis Highway', 'Fredericksburg', 'VA', '22401', 'tacobell.jpg', 4, 1, 'http://www.tacobell.com', 0, 1, 1, 0, 0, 0, 1, 3, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 4, 2, 0),
-('The Melting Pot', '1618 Carl D Silver Parkway', 'Fredericksburg', 'VA', '22401', 'meltingPot.jpg', 4.0, 3, 'http://www.meltingpot.com', 0, 0, 1, 1, 0, 1, 0, 1, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0),
+('The Melting Pot', '1618 Carl D Silver Parkway', 'Fredericksburg', 'VA', '22401', 'meltingPot.png', 4.0, 3, 'http://www.meltingpot.com', 0, 0, 1, 1, 0, 1, 0, 1, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0),
 ('TruLuvs - A Modern American Bistro', '1101 Sophia Street', 'Fredericksburg', 'VA', '22401', 'TruLuvs.jpg', 3.5, 2, 'http://www.truluvs.com', 0, 0, 1, 1, 1, 1, 0, 0, 3, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 ('Umi Japanese Fine Dining', '1500 Jefferson Davis Highway', 'Fredericksburg', 'VA', '22401', 'default.jpg', 4.0, 2, 'not applicable', 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 5, 0, 0, 5, 0, 0, 0, 0, 1, 0), 
 ('Vinnys Italian Grill & Pizzeria', '201 Kings Highway', 'Fredericksburg', 'VA', '22401', 'Vinnys.jpg', 4.0, 2, 'http://www.fredericksburgpizza.com', 0, 1, 1, 0, 0, 0, 1, 0, 0, 4, 0, 0, 4, 0, 0, 0, 0, 0, 0, 1, 0);
