@@ -84,7 +84,7 @@ if ($_GET['signup'] == "yes") {
 <tr><td>On a scale of 1 to 5, how fast do you want your service to be?</td></tr>
 <tr><td><input type="radio" name="group9" value="speedOne"> 1 </td>
 <td><input type="radio" name="group9" value="speedTwo"> 2 </td>
-<tr><td><input type="radio" name="group9" value="speedThree"> 3 </td>
+<td><input type="radio" name="group9" value="speedThree"> 3 </td>
 <td><input type="radio" name="group9" value="speedFour"> 4 </td>
 <td><input type="radio" name="group9" value="speedFive"> 5 </td>
 
