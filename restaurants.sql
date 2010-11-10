@@ -178,7 +178,6 @@ INSERT INTO `Restaurants`.`Users` (`first_name`, `last_name`, `username`, `passw
 ('Marge', 'Simpson', 'ms', 'ms', 3, 1, 1, 0, 1, 0, 0, 0, 5, 1, 5, 0, 3, 3, 4, 1, 0, 1, 1, 2, 5, 4),
 ('Bart', 'Simpson', 'bs', 'bs',  1, 1, 0, 0, 0, 1, 0, 1, 5, 2, 5, 0, 2, 1, 1, 1, 0, 1, 1, 2, 0, 0);
 
-
 --
 -- Table structure for table `UserRatings`
 --
