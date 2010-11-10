@@ -75,7 +75,7 @@ INSERT INTO `Restaurants`.`RestaurantInfo` (`name`, `street_address`, `city`, `s
 ('Kabob City','737 Warrenton Road' , 'Fredericksburg', 'VA', '22406', 'Kabob_City.Bmp', 4.0, 2, 'not applicable', 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
 ('Laziza', '4256 Plank Road', 'Fredericksburg', 'VA', '22407', 'Laziza.jpg', 4.0, 2, 'http://www.lazizaoffredericksburg.com', 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
 ('La Petite Auberge', '311 William Street', 'Fredericksburg', 'VA', '22401', 'La_Petite_Auberge.jpg', 4.0, 4, 'http://www.lapetiteaubergefredericksburg.com', 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 1, 0),
-('Ledo Pizza', '2801 Plank Road' , 'Fredericksburg', 'VA', '22401', 'default.jpeg', 3.0, 1.5, 'not applicable', 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0),
+('Ledo Pizza', '2801 Plank Road' , 'Fredericksburg', 'VA', '22401', 'default.jpg', 3.0, 1.5, 'not applicable', 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0),
 ('Longhorn', '10012 Southpoint Parkway', 'Fredericksburg', 'VA', '22407', 'default.jpg', 3.5, 2, 'not applicable', 0, 1, 1, 0, 0, 1, 1, 0, 5, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 ('McDonalds', '1212 Jefferson Davis Highway', 'Fredericksburg', 'VA', '22401', 'McDonalds.jpg', 3.0, 1, 'http://www.mcdonalds.com', 0, 1, 1, 0, 1, 0, 1, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
 ('Mexico', '9825 Jefferson Davis Hwy', 'Fredericksburg', 'VA', '22408', 'Mexico.Bmp', 3.5, 2, 'http://www.mexico-restaurant.com/', 0, 1, 1, 1, 0, 1, 1, 1, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 2, 1),
