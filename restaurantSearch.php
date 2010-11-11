@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 include ("header.php"); 
 
 $query = "SELECT name, price, average_user_rating, delivery, takeout, accommodate_groups,
@@ -64,6 +66,12 @@ if ($countrows == 0) {
 		
 
 echo "<h1>$name</h1>";
+
+if (isset($_SESSION['user_id']) && $_SESSION['user_id']>0) {
+	$_SESSION['restaurant_id'] = $row['restaurant_id'];
+	include("starcode.php");
+}
+
 echo "$street_address <br/>";
 echo "$city, $state $zip <br/>";
 echo "Website: <a href='$website' target='_blank'>$website</a> <br/><br/>";

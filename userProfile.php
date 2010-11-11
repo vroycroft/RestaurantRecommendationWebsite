@@ -10,6 +10,7 @@ include ("header.php");
                         or die("Error querying database.");
 $row = mysqli_fetch_array($result);
 $firstName = $row['first_name'];
+$user_id = $row['user_id'];
 
                 $confirmation = mysqli_num_rows($result);
 
@@ -20,7 +21,8 @@ $firstName = $row['first_name'];
                 }else{
 
 			$_SESSION['username'] = $name;
-			$_SESSION['password'] = $pw;
+			$_SESSION['password'] = md5($pw);
+			$_SESSION['user_id'] = $user_id;
 
 			echo "<p>Welcome, $firstName</p>\n";
 			
