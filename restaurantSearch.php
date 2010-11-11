@@ -67,18 +67,19 @@ if ($countrows == 0) {
 
 echo "<h1>$name</h1>";
 
-if (isset($_SESSION['user_id']) && $_SESSION['user_id']>0) {
-	$_SESSION['restaurant_id'] = $row['restaurant_id'];
-	include("starcode.php");
-}
 
 echo "$street_address <br/>";
 echo "$city, $state $zip <br/>";
 echo "Website: <a href='$website' target='_blank'>$website</a> <br/><br/>";
-echo "<br><br><img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
+echo "<br><img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
+if (isset($_SESSION['user_id']) && $_SESSION['user_id']>0) {
+	$_SESSION['restaurant_id'] = $row['restaurant_id'];
+	include("starcode.php");
+}
+echo "<br/>";
 echo "Average User Rating: $average_user_rating <br/>";
 }
-
+echo "<hr/>";
 echo "<h1>You may also like: </h1>";
 
 $k = 0;
