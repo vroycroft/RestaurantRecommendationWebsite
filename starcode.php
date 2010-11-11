@@ -59,7 +59,7 @@ if($sss >= 1)
 
 ?>
 
-<table width=75% cellpadding=0 cellspacing=0 border=0 style="border: 1px solid blue; font-family: arial, verdana, san-serif; font-size: 13px;">
+<table width=75% cellpadding=0 cellspacing=0 border=0 style="font-family: arial, verdana, san-serif; font-size: 13px;">
    <tr align=center>
       <td>
         <form name=rate method=post target=\"_blank\" action="/starrating.php?restaurant_id=$restaurant_id">
@@ -137,7 +137,7 @@ if($sss >= 1)
 
     <tr>
       <td align=right>
-	 <a style="color: green; font-size: 11px; text-decoration: none; " id=dum href="http://www.hscripts.com">&copy; hscripts.com</a>
+	 <a style="color: blue; font-size: 10px; text-decoration: none; " id=dum href="http://www.hscripts.com">&copy; hscripts.com</a>
       </td>
     </tr>
 </table>
