@@ -119,7 +119,7 @@ if($sss >= 1)
 
    <tr>
       <td align=center>
-            <b>Rate this Page :</b> 
+            <b>Rate this restaurant:</b> 
             <img name=i1 class=star onmouseover="selstar(1)" onmouseout="remstar(1)" onclick="setrate(1)" src="/star1.gif">
             <img name=i2 class=star onmouseover="selstar(2)" onmouseout="remstar(2)" onclick="setrate(2)" src="/star1.gif">
             <img name=i3 class=star onmouseover="selstar(3)" onmouseout="remstar(3)" onclick="setrate(3)" src="/star1.gif">
