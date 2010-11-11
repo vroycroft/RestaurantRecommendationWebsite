@@ -3,12 +3,12 @@
 include "db_connect.php";
 
 // Menu Background Function
-function bgtype($pagename) {
+function bgtype($pagename, $navname) {
 $filename = $_SERVER['REQUEST_URI'];
 if (stristr($filename, $pagename) !== FALSE) {
-	echo("bgcolor=#DDDDDD");
+	echo("onclick=\"window.location.href='".$pagename."'\" onMouseOver=\"this.style.background='url(".$navname."2.jpg)'\" onMouseOut=\"this.style.background='url(".$navname."2.jpg)'\" background=\"".$navname."2.jpg\"");
 } else {
-	echo("onMouseOver=\"hoveron(this)\" onMouseOut=\"hoveroff(this)\" bgcolor=\"#EEEEEE\"");
+	echo("onclick=\"window.location.href='".$pagename."'\" onMouseOver=\"this.style.background='url(".$navname."2.jpg)'\" onMouseOut=\"this.style.background='url(".$navname."1.jpg)'\" background=\"".$navname."1.jpg\"");
 }
 
 }
@@ -70,16 +70,15 @@ function hoveroff(cell) {
           <tr>
             <td align="center" background="body.jpg">
             <table width="700" border="0" cellpadding="5" cellspacing="0">
-            <tr><td align="left" valign="top" width="150">              
+            <tr><td align="center" valign="top" width="180">              
             <br /><br /><br />
 
 <!-- Main Menu -->
-<table border=1 bordercolor=gray cellpadding=3 cellspacing=0 width="150">
-<tr><td align=center <?php bgtype("/index.php"); ?>>&nbsp;&nbsp;<a href="index.php">Home</a>&nbsp;&nbsp;</td></tr></tr>
-<tr><td align=center <?php bgtype("/login.php"); ?>>&nbsp;&nbsp;<a href="login.php">Login</a>&nbsp;&nbsp;</td></tr>
-<tr><td align=center <?php bgtype("/signup.php"); ?>>&nbsp;&nbsp;<a href="signup.php">Signup</a>&nbsp;&nbsp;</td></tr>
-<tr><td align=center <?php bgtype("/addRestaurant.php"); ?>>&nbsp;&nbsp;<a href="addRestaurant.php">Add Restaurant</a>&nbsp;&nbsp;</td></tr>
-<tr><td align=center <?php bgtype("/page4.php"); ?>>&nbsp;&nbsp;<a href="index.php">Page4</a>&nbsp;&nbsp;</td></tr>
+<table border=1 bordercolor=gray cellpadding=0 cellspacing=0 width="180">
+<tr><td align=center height=50 <?php bgtype("index.php", "home"); ?>>&nbsp;</td></tr></tr>
+<tr><td align=center height=50 <?php bgtype("login.php", "login"); ?>>&nbsp;</td></tr>
+<tr><td align=center height=50 <?php bgtype("signup.php", "signup"); ?>>&nbsp;</td></tr>
+<tr><td align=center height=50 <?php bgtype("addRestaurant.php", "addrestaurant"); ?>>&nbsp;</td></tr>
 </table>
 <!-- End Main Menu -->
 
