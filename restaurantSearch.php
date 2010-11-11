@@ -2,7 +2,7 @@
 
 include ("header.php"); 
 
-$query = "SELECT name, price, delivery, takeout, accommodate_groups,
+$query = "SELECT name, price, average_user_rating, delivery, takeout, accommodate_groups,
 reservations, outside_seating, bar, kids, fast_food,
 steakhouse_influence, american_influence, middle_eastern_influence,
 asian_influence, italian_influence, chinese_influence,
@@ -68,6 +68,7 @@ echo "$street_address <br/>";
 echo "$city, $state $zip <br/>";
 echo "Website: <a href='$website' target='_blank'>$website</a> <br/><br/>";
 echo "<br><br><img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
+echo "Average User Rating: $average_user_rating <br/>";
 }
 
 echo "<h1>You may also like: </h1>";
