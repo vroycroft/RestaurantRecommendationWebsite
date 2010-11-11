@@ -59,11 +59,11 @@ if($sss >= 1)
 
 ?>
 
-<table width=100% cellpadding=0 cellspacing=0 border=0 style="border: 1px solid green; font-family: arial, verdana, san-serif; font-size: 13px;">
+<table width=100% cellpadding=0 cellspacing=0 border=0 style="border: 1px solid blue; font-family: arial, verdana, san-serif; font-size: 13px;">
    <tr align=center>
       <td>
         <form name=rate method=post target=\"_blank\" action="/starrating.php?restaurant_id=$restaurant_id">
-             <b>This Page has been currently rated as: </b>
+             <b>This restaurant is currently rated as: </b>
              <?php for($i=1;$i<=5;$i++)
                      {
                    	if($rating>=1)
