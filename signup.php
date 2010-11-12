@@ -49,6 +49,9 @@ if ($_GET['signup'] == "yes") {
 </table></center>
 
 <br/><hr/>
+<center>
+<b><p><i><font size="5.5" face="Georgia" color="000066">S</font><font size="4.5" face="Georgia">urvey:</p></b></i></font>
+</center>
 
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td align="left">How much do you prefer spending per person (on average)?</td></tr>
