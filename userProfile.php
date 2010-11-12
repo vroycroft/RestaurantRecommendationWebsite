@@ -15,9 +15,9 @@ $user_id = $row['user_id'];
                 $confirmation = mysqli_num_rows($result);
 
                 if ($confirmation == 0){
-                        echo "<p>Incorrect username or password. Please try again by clicking the link below.</p>\n";
-
-			echo "<p><a href='login.php'>Log In</a></p>";
+                     echo "<p><center><b><i><font size=4 face=Georgia color=000066>Incorrect username or password. <br/>";
+		   echo "Please try again by clicking the link below.</font></p></b></i><br/>";
+		   echo "<p><center><b><i><font size=4 face=Georgia color=000066><a href='login.php'>Log In</a></b></i></center></p>";                
                 }else{
 
 			$_SESSION['username'] = $name;
