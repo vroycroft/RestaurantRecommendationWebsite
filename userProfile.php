@@ -27,13 +27,10 @@ $user_id = $row['user_id'];
 			$firstLetterOfName = substr($firstName, 0, 1);
  			$theRestOfName = substr($firstName,  1, strlen($firstName)-1);
 			echo "<p><center><b><i><font size=7 face=Georgia color=000066>W</font><font size=6 face=Georgia>elcome, </font><font size=7 face=Georgia color=000066>$firstLetterOfName</font><font size=6 face=Georgia>$theRestOfName !</font></p></b></i>\n";
-			
-                }
-        ?>
+?>
 <hr/>
 <br/>  
 <p><center><b><font size=5 face=Georgia color=000066>Restaurant(s) closest to your survey answers:</font>
-
 <?php
 $username = $_SESSION['username'];
 //echo "username: $username";	
@@ -329,3 +326,9 @@ for($n=0; $n<$numOfUsers; ++$n)
 	
 }
 ?>
+			
+                }
+   
+
+
+
