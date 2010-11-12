@@ -38,55 +38,56 @@ if ($_GET['signup'] == "yes") {
 
 ?>
 <center>
-<p><b>Signup</b></p>
-
+<b><p><i><font size="5.5" face="Georgia" color="000066">S</font><font size="4.5" face="Georgia">ignup:</p></b></i></font>
 
 <form action="signup.php?signup=yes" method="post">
 <table border="0" cellpadding="3" cellspacing="0">
-<tr><td align="right"><b>First Name: </b></td><td align="left"><input type="text" name="first_name" value=""></td</tr>
-<tr><td align="right"><b>Last Name: </b></td><td align="left"><input type="text" name="last_name" value=""></td</tr>
-<tr><td align="right"><b>Username: </b></td><td align="left"><input type="text" name="username" value=""></td</tr>
-<tr><td align="right"><b>Password: </b></td><td align="left"><input type="password" name="password" value=""></td</tr>
+<tr><td align="right"><b><i><font size="4.5" face="Georgia" color="CC6600">F</font><font size="3.5" face="Georgia">irst</font></b></i><b><i><font size="4.5" face="Georgia" color="CC6600"> N</font><font size="3.5" face="Georgia">ame:</font></b></i></td><td align="left"><input type="text" name="first_name" value=""></td</tr>
+<tr><td align="right"><b><i><font size="4.5" face="Georgia" color="CC6600">L</font><font size="3.5" face="Georgia">ast</font></b></i><b><i><font size="4.5" face="Georgia" color="CC6600"> N</font><font size="3.5" face="Georgia">ame:</font></b></i></td><td align="left"><input type="text" name="last_name" value=""></td</tr>
+<tr><td align="right"><b><i><font size="4.5" face="Georgia" color="CC6600">U</font><font size="3.5" face="Georgia">sername:</font></b></i><b></td><td align="left"><input type="text" name="username" value=""></td</tr>
+<tr><td align="right"><b><i><font size="4.5" face="Georgia" color="CC6600">P</font><font size="3.5" face="Georgia">assword:</font></b></i><b></td><td align="left"><input type="password" name="password" value=""></td</tr>
+</table>
+<br/><hr/>
 
-<tr><td>How much do you prefer spending per person (on average)?</td></tr>
-<tr><td><input type="radio" name="group1" value="Cheap"> Cheap (Up to $10)</td>
-<td><input type="radio" name="group1" value="Moderate"> Moderate (Up to $30)</td>
-<td><input type="radio" name="group1" value="Expensive"> Expensive (Up to $60)</td>
+<tr>How much do you prefer spending per person (on average)?</tr>
+<tr><input type="radio" name="group1" value="Cheap"> Cheap (Up to $10)</tr>
+<td><input type="radio" name="group1" value="Moderate"> Moderate (Up to $30)</tr>
+<td><input type="radio" name="group1" value="Expensive"> Expensive (Up to $60)</tr>
 
-<tr><td>Do you prefer a restaurant that offers delivery?</td></tr>
-<tr><td><input type="radio" name="group2" value="yesDelivery"> Yes </td>
-<td><input type="radio" name="group2" value="noDelivery"> No </td>
+<tr>Do you prefer a restaurant that offers delivery?</td></tr>
+<tr><input type="radio" name="group2" value="yesDelivery"> Yes </tr>
+<tr><input type="radio" name="group2" value="noDelivery"> No </tr>
 
-<tr><td>Do you prefer a restaurant that offers takeout?</td></tr>
-<tr><td><input type="radio" name="group3" value="yesTakeout"> Yes </td>
-<td><input type="radio" name="group3" value="noTakeout"> No </td>
+<tr>Do you prefer a restaurant that offers takeout?</tr>
+<tr><td><input type="radio" name="group3" value="yesTakeout"> Yes </tr>
+<tr><input type="radio" name="group3" value="noTakeout"> No </tr>
 
-<tr><td>Do you prefer a restaurant that can accommodate groups?</td></tr>
-<tr><td><input type="radio" name="group4" value="yesGroups"> Yes </td>
-<td><input type="radio" name="group4" value="noGroup"> No </td>
+<tr>Do you prefer a restaurant that can accommodate groups?</tr>
+<tr><input type="radio" name="group4" value="yesGroups"> Yes </tr>
+<tr><input type="radio" name="group4" value="noGroup"> No </tr>
 
-<tr><td>Do you prefer a restaurant that accepts reservations?</td></tr>
-<tr><td><input type="radio" name="group5" value="yesReservations"> Yes </td>
-<td><input type="radio" name="group5" value="noReservations"> No </td>
+<tr>Do you prefer a restaurant that accepts reservations?</tr>
+<tr><input type="radio" name="group5" value="yesReservations"> Yes </tr>
+<tr><input type="radio" name="group5" value="noReservations"> No </tr>
 
-<tr><td>Do you prefer a restaurant that has outside seating?</td></tr>
-<tr><td><input type="radio" name="group6" value="yesOutsideSeating"> Yes </td>
-<td><input type="radio" name="group6" value="noOutsideSeating"> No </td>
+<tr>Do you prefer a restaurant that has outside seating?</tr>
+<tr><td><input type="radio" name="group6" value="yesOutsideSeating"> Yes </tr>
+<tr><input type="radio" name="group6" value="noOutsideSeating"> No </tr>
 
-<tr><td>Do you prefer a restaurant that has a full bar?</td></tr>
-<tr><td><input type="radio" name="group7" value="yesBar"> Yes </td>
-<td><input type="radio" name="group7" value="noBar"> No </td>
+<tr>Do you prefer a restaurant that has a full bar?</tr>
+<tr><input type="radio" name="group7" value="yesBar"> Yes </tr>
+<tr><input type="radio" name="group7" value="noBar"> No </tr>
 
-<tr><td>Do you prefer a restaurant that is good for kids?</td></tr>
-<tr><td><input type="radio" name="group8" value="yesKids"> Yes </td>
-<td><input type="radio" name="group8" value="noKids"> No </td>
+<tr>Do you prefer a restaurant that is good for kids?</tr>
+<tr><input type="radio" name="group8" value="yesKids"> Yes </tr>
+<tr><input type="radio" name="group8" value="noKids"> No </tr>
 
-<tr><td>On a scale of 1 to 5, how fast do you want your service to be?</td></tr>
-<tr><td><input type="radio" name="group9" value="speedOne"> 1 </td>
-<td><input type="radio" name="group9" value="speedTwo"> 2 </td>
-<td><input type="radio" name="group9" value="speedThree"> 3 </td>
-<td><input type="radio" name="group9" value="speedFour"> 4 </td>
-<td><input type="radio" name="group9" value="speedFive"> 5 </td>
+<tr>On a scale of 1 to 5, how fast do you want your service to be?</tr>
+<tr><td><input type="radio" name="group9" value="speedOne"> 1 </tr>
+<tr><input type="radio" name="group9" value="speedTwo"> 2 </tr>
+<tr><input type="radio" name="group9" value="speedThree"> 3 </tr>
+<tr><input type="radio" name="group9" value="speedFour"> 4 </tr>
+<tr><input type="radio" name="group9" value="speedFive"> 5 </tr>
 
 
 
