@@ -48,7 +48,7 @@ if ($_GET['signup'] == "yes") {
 <tr><td align="right"><b><i><font size="4.5" face="Georgia" color="CC6600">P</font><font size="3.5" face="Georgia">assword:</font></b></i><b></td><td align="left"><input type="password" name="password" value=""></td</tr>
 </table>
 <br/><hr/>
-
+<table>
 <tr>How much do you prefer spending per person (on average)?</tr>
 <tr><input type="radio" name="group1" value="Cheap"> Cheap (Up to $10)</tr>
 <td><input type="radio" name="group1" value="Moderate"> Moderate (Up to $30)</tr>
