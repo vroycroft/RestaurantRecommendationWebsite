@@ -169,7 +169,7 @@ for($n=0; $n<$numOfRestaurants; ++$n)
 ?>
 
 <hr/>
-<p><center><b><font size=5 face=Georgia color=000066>User(s) you are closest to:</font>
+<p><center><b><font size=5 face=Georgia color=000066>User(s) you are closest to:</font></b>
 
 
 <?php
