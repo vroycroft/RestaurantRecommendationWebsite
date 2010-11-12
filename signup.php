@@ -89,11 +89,11 @@ if ($_GET['signup'] == "yes") {
 <tr><td align="left"><input type="radio" name="group8" value="noKids"> No </td></tr>
 
 <tr><td align="left">On a scale of 1 to 5, how fast do you want your service to be?</td></tr>
-<tr><td align="left"><input type="radio" name="group9" value="speedOne"> 1 </td></tr>
+<tr><td align="left"><input type="radio" name="group9" value="speedOne"> 1 (Sluggish) </td></tr>
 <tr><td align="left"><input type="radio" name="group9" value="speedTwo"> 2 </td></tr>
-<tr><td align="left"><input type="radio" name="group9" value="speedThree"> 3 </td></tr>
+<tr><td align="left"><input type="radio" name="group9" value="speedThree"> 3 (Moderate)</td></tr>
 <tr><td align="left"><input type="radio" name="group9" value="speedFour"> 4 </td></tr>
-<tr><td align="left"><input type="radio" name="group9" value="speedFive"> 5 </td></tr>
+<tr><td align="left"><input type="radio" name="group9" value="speedFive"> 5 (Super fast)</td></tr>
 <tr> </tr><tr> </tr>
 <tr><td align="left">On a scale of 1 to 5, how much do you prefer this type of restaurant?</tr>
 <tr><td align="center"><b>Steakhouse</b></td></tr>
