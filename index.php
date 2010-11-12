@@ -9,7 +9,7 @@ include("header.php");
 <BODY>
 
 <br/>
-<b><p><font size="6.5" face="Georgia" color="000066">R</font><font size="4.5" face="Georgia">estaurants currently in the database:</p></font>
+<b><p><font size="6.5" face="Georgia" color="000066">R</font><font size="4.5" face="Georgia">estaurants currently in the database:</p></b></font>
 
 <?php
 $query = "SELECT name FROM $table";
