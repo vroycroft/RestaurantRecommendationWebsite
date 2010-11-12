@@ -9,7 +9,7 @@ include("header.php");
 <BODY>
 
 <br/>
-Restaurants:
+<b><p><font size="6.5" face="Georgia" color="000066">R</font><font size="4.5" face="Georgia">estaurants currently in the database:</p></font>
 
 <?php
 $query = "SELECT name FROM $table";
@@ -19,7 +19,12 @@ or die("Error Querying Database");
 while($row = mysqli_fetch_array($result)) {
 $name = $row['name'];
 
-echo "<li>$name</li>";
+$firstLetter = substr($name, 0, 1);
+$theRest = substr($name, 1, strlen($name)-1);
+
+echo "<li><i><font size=5 face=Georgia color=000066>$firstLetter</font><font size=4 face=Georgia color=CC6600>$theRest</i></li></font>";
+
+//echo "<li>$name</li>";
 }
 ?>
 
