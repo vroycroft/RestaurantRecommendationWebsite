@@ -64,13 +64,17 @@ if ($countrows == 0) {
 		$website = $row['website'];
 		$delivery = $row['delivery'];
 		
+$firstLetter = substr($name, 0, 1);
+$theRest = substr($name, 1, strlen($name)-1);
 
-echo "<h1>$name</h1>";
+echo "<b><i><font size=8 face=Georgia color=cc6600>$firstLetter</font><font size=6 face=Georgia>$theRest</i></b></font><br/>";
+
+//echo "<h1>$name</h1>";
 
 
-echo "$street_address <br/>";
-echo "$city, $state $zip <br/>";
-echo "Website: <a href='$website' target='_blank'>$website</a> <br/><br/>";
+echo "<b><font size=3 face=Georgia color=000066>$street_address </b></font><br/>";
+echo "<b><font size=3 face=Georgia color=000066>$city, $state $zip </b></font><br/>";
+echo "<b><font size=3 face=Georgia color=000066>Website: <a href='$website' target='_blank'>$website</a> </font></b><br/><br/>";
 echo "<br><img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
 if (isset($_SESSION['user_id']) && $_SESSION['user_id']>0) {
 	$_SESSION['restaurant_id'] = $row['restaurant_id'];
@@ -80,7 +84,7 @@ echo "<br/>";
 echo "Average User Rating: $average_user_rating <br/>";
 }
 echo "<hr/>";
-echo "<h1>You may also like: </h1>";
+echo "<b><font size=5 face=Georgia color=000066>You may also like: </font></b><br/>";
 
 $k = 0;
 
@@ -202,18 +206,18 @@ for($n=0; $n<$numOfRestaurants; ++$n)
 {
 	if($distances[$n][1] == $minDistance)
 	{
-		echo "<h2>{$distances[$n][0]}</h2>";
+		echo "<b><i><font size=5 face=Georgia color=cc6600>{$distances[$n][0]}</i></font></b><br/>";
 	}
 }
 
 echo "<hr></hr>";
-echo "<h2>Calculated Distances:</h2>";
+echo "<b><font size=3 face=Georgia color=000066>Calculated Distances:</b></font><br/>";
 
 for($n=0; $n<$numOfRestaurants; ++$n)
 {
 	if($n != $k)
 	{
-		echo "{$distances[$n][0]} = {$distances[$n][1]}<br/>";
+		echo "<i><font size=3 face=Georgia color=cc6600>{$distances[$n][0]} = {$distances[$n][1]}<br/></font>";
 	}
 }
 
