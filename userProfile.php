@@ -1,4 +1,4 @@
-        <?php
+                <?php
                 
 include ("header.php");
 
@@ -23,13 +23,16 @@ $user_id = $row['user_id'];
 			$_SESSION['username'] = $name;
 			$_SESSION['password'] = md5($pw);
 			$_SESSION['user_id'] = $user_id;
-
-			echo "<p>Welcome, $firstName</p>\n";
+			
+			$firstLetterOfName = substr($firstName, 0, 1);
+ 			$theRestOfName = substr($firstName,  1, strlen($firstName)-1);
+			echo "<p><center><b><i><font size=7 face=Georgia color=000066>W</font><font size=6 face=Georgia>elcome, </font><font size=7 face=Georgia color=000066>$firstLetterOfName</font><font size=6 face=Georgia>$theRestOfName !</font></p></b></i>\n";
 			
                 }
         ?>
-
-<h1>Restaurants closest to your survey answers:</h1>
+<hr/>
+<br/>  
+<p><center><b><font size=5 face=Georgia color=000066>Restaurant(s) closest to your survey answers:</font>
 
 <?php
 $username = $_SESSION['username'];
@@ -154,7 +157,7 @@ for($n=0; $n<$numOfRestaurants; ++$n)
 {
 	if($distances[$n][1] == $minDistance)
 	{
-		echo "<h2>{$distances[$n][0]}</h2>";
+		echo "<h2><i><font color=CC6600>{$distances[$n][0]}</font></i></h2>";
 	}
 }
 
@@ -165,7 +168,9 @@ for($n=0; $n<$numOfRestaurants; ++$n)
 }
 ?>
 
-<h1>Users you are closest to:</h1>
+<hr/>
+<p><center><b><font size=5 face=Georgia color=000066>User(s) you are closest to:</font>
+
 
 <?php
 //$username = $_SESSION['username'];
@@ -305,25 +310,22 @@ $distToCompare = $userDistances[$n][1];
 	{
 		if($userDistances[$n][1] == $minDistance)
 		{
-			echo "<h2>{$userDistances[$n][2]}</h2>";
+			echo "<h2><i><font color=cc6600>{$userDistances[$n][2]}</font></i></h2>";
 		}
 	}
 
 
 echo "<hr></hr>";
-echo "<h2>Calculated Distances:</h2>";
+echo "<h2><i><font color=000066>Calculated Distances:</h2></font></i>";
 
 for($n=0; $n<$numOfUsers; ++$n)
 {
 	if($userDistances[$n][0] != $username)
 	{
-		echo "{$userDistances[$n][0]} = {$userDistances[$n][1]}<br/>";
+		echo "<font color=cc6600>{$userDistances[$n][0]} = {$userDistances[$n][1]}</font><br/>";
 	}
 }
 
 	
 }
 ?>
-
-
-
