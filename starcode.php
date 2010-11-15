@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!-- Welcome to the scripts database of HIOX INDIA      -->
 <!-- This tool is developed and a copyright             -->
 <!-- product of HIOX INDIA.			        -->
@@ -9,7 +6,7 @@ session_start();
 <br>
 <script type="text/javascript">
 	var name = new Array();
-	name[0]= "/star2.gif";
+	name[0]= "star2.gif";
 	if(document.images)
 	{
 		var ss = new Image();
@@ -62,28 +59,28 @@ if($sss >= 1)
 <table width=75% cellpadding=0 cellspacing=0 border=0 style="font-family: arial, verdana, san-serif; font-size: 13px;">
    <tr align=center>
       <td>
-        <form name=rate method=post target=\"_blank\" action="/starrating.php?restaurant_id=$restaurant_id">
+        <form name=rate method=post target=\"_blank\" action="starrating.php?restaurant_id=<?php echo($restaurant_id); ?>">
              <b>This restaurant is currently rated as: </b>
              <?php for($i=1;$i<=5;$i++)
                      {
                    	if($rating>=1)
                 	{
-		           echo "<img src=\"/star2.gif\">";
+		           echo "<img src=\"star2.gif\">";
                            $rating=$rating-1;
 	                }
 	                else if($rating>=0.5)
 	                {
- 		           echo "<img src=\"/star3.gif\">";
+ 		           echo "<img src=\"star3.gif\">";
 		           $rating=$rating-1;
 	                }
  	                else if ($rating<0.5 && $rating>0)
 	                {
-		           echo "<img src=\"/star1.gif\">";
+		           echo "<img src=\"star1.gif\">";
 		           $rating=$rating-1;
 	                }
 	                else if($rating<=0)
 	                {
-		           echo "<img src=\"/star1.gif\">";
+		           echo "<img src=\"star1.gif\">";
 	                }
                     }	
            ?>
@@ -98,7 +95,7 @@ if($sss >= 1)
       {
 	for(var x=1;x<=val;x++)
 	{
-		document['i'+x].src="/star2.gif";
+		document['i'+x].src="star2.gif";
 	}
 	
       }
@@ -106,7 +103,7 @@ if($sss >= 1)
       {
 	for(var x=1;x<=val;x++)
 	{
-		document['i'+x].src="/star1.gif";
+		document['i'+x].src="star1.gif";
 	}
       }
 
@@ -120,11 +117,11 @@ if($sss >= 1)
    <tr>
       <td align=center>
             <b>Rate this restaurant:</b> 
-            <img name=i1 class=star onmouseover="selstar(1)" onmouseout="remstar(1)" onclick="setrate(1)" src="/star1.gif">
-            <img name=i2 class=star onmouseover="selstar(2)" onmouseout="remstar(2)" onclick="setrate(2)" src="/star1.gif">
-            <img name=i3 class=star onmouseover="selstar(3)" onmouseout="remstar(3)" onclick="setrate(3)" src="/star1.gif">
-            <img name=i4 class=star onmouseover="selstar(4)" onmouseout="remstar(4)" onclick="setrate(4)" src="/star1.gif">
-            <img name=i5 class=star onmouseover="selstar(5)" onmouseout="remstar(5)" onclick="setrate(5)" src="/star1.gif">
+            <img name=i1 class=star onmouseover="selstar(1)" onmouseout="remstar(1)" onclick="setrate(1)" src="star1.gif">
+            <img name=i2 class=star onmouseover="selstar(2)" onmouseout="remstar(2)" onclick="setrate(2)" src="star1.gif">
+            <img name=i3 class=star onmouseover="selstar(3)" onmouseout="remstar(3)" onclick="setrate(3)" src="star1.gif">
+            <img name=i4 class=star onmouseover="selstar(4)" onmouseout="remstar(4)" onclick="setrate(4)" src="star1.gif">
+            <img name=i5 class=star onmouseover="selstar(5)" onmouseout="remstar(5)" onclick="setrate(5)" src="star1.gif">
             <input type=hidden name="rating">
             </form>&nbsp;&nbsp;
         <font color='#0000ff'>
