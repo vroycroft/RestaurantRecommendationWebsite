@@ -78,7 +78,15 @@ function hoveroff(cell) {
 <!-- Main Menu -->
 <table border=1 bordercolor=gray cellpadding=0 cellspacing=0 width="180">
 <tr><td align=center height=50 <?php bgtype("index.php", "home"); ?>>&nbsp;</td></tr></tr>
-<tr><td align=center height=50 <?php bgtype("login.php", "login"); ?>>&nbsp;</td></tr>
+
+<?php
+if (isset($_SESSION['user_id']) && $_SESSION['user_id']>0) {
+echo("<tr><td align=center height=50 "); bgtype("logout.php", "login"); echo(">&nbsp;</td></tr>");
+} else {
+echo("<tr><td align=center height=50 "); bgtype("login.php", "login"); echo(">&nbsp;</td></tr>");
+}
+?>
+
 <tr><td align=center height=50 <?php bgtype("signup.php", "signup"); ?>>&nbsp;</td></tr>
 <tr><td align=center height=50 <?php bgtype("addRestaurant.php", "addrestaurant"); ?>>&nbsp;</td></tr>
 </table>
