@@ -79,9 +79,12 @@ echo "<br><img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>"
 if (isset($_SESSION['user_id']) && $_SESSION['user_id']>0) {
 	$_SESSION['restaurant_id'] = $row['restaurant_id'];
 	include("starcode.php");
-}
+} else {
+
 echo "<br/>";
-echo "Average User Rating: $average_user_rating <br/>";
+echo "<b><i><font size=4 face=Georgia color=000066>Average User Rating: $average_user_rating </b></i><br/><br/>";
+
+}
 }
 echo "<hr/>";
 echo "<b><font size=5 face=Georgia color=000066>You may also like: </font></b><br/>";
