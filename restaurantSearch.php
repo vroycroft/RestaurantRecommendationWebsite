@@ -103,6 +103,25 @@ echo "<b><i><font size=4 face=Georgia color=000066>Average User Rating: $average
 
 }
 }
+
+echo "Price: ";
+if($price == 1)
+{
+	echo "\$ <br/>";
+}
+else if ($price == 2)
+{
+	echo "\$$ <br/>";
+}
+else if ($price == 3)
+{
+	echo "\$$$ <br/>";
+}
+else
+{
+	echo "\$$$$ <br/>";
+}
+
 echo "<hr/>";
 
 $influences=array("Fast Food", "Steakhouse", "American", "Middle Eastern", "Asian", "Italian", "Chinese", "Japanese", "Indian", "French", "Greek", "Mexican", "Vegetarian", "Seafood");
