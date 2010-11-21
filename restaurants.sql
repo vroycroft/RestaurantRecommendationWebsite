@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `Restaurants`.`Users` (
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `username` varchar(25) NOT NULL,
-  `password` varchar(16) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `price` INT NOT NULL,
   `delivery` INT NOT NULL,
   `takeout` INT NOT NULL,
