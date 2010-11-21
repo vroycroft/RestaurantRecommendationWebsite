@@ -6,7 +6,8 @@ include ("header.php");
                 $name = $_POST['username'];
                 $pw = $_POST['password'];
 
-                $query = "SELECT * FROM Users WHERE username = '$name' AND password = '$pw';";
+
+                $query = "SELECT * FROM Users WHERE username = '$name' AND password = SHA('$pw');";
                 $result = mysqli_query($db, $query)
                         or die("Error querying database.");
 $row = mysqli_fetch_array($result);
@@ -22,7 +23,7 @@ $user_id = $row['user_id'];
                 }else{
 
 			$_SESSION['username'] = $name;
-			$_SESSION['password'] = md5($pw);
+			$_SESSION['password'] = $pw;
 			$_SESSION['user_id'] = $user_id;
 			
 			$firstLetterOfName = substr($firstName, 0, 1);
