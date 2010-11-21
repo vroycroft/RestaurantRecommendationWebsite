@@ -63,6 +63,23 @@ if ($countrows == 0) {
 		$average_user_rating = $row['average_user_rating'];
 		$website = $row['website'];
 		$delivery = $row['delivery'];
+		$price = $row['price'];
+		$groups = $row['accommodate_groups'];
+		$delivery = $row['delivery'];
+		$fastFood = $row['fast_food'];
+		$steak = $row['steakhouse_influence'];
+		$american = $row['american_influence'];
+		$middleEastern = $row['middle_eastern_influence'];
+		$asian = $row['asian_influence'];
+		$italian = $row['italian_influence'];
+		$chinese = $row['chinese_influence'];
+		$japanese = $row['japanese_influence'];
+		$indian = $row['indian_influence'];
+		$french = $row['french_influence'];
+		$greek = $row['greek_influence'];
+		$mexican = $row['mexican_influence'];
+		$veg = $row['vegetarian_influence'];
+		$sea = $row['seafood_influence'];
 		
 $firstLetter = substr($name, 0, 1);
 $theRest = substr($name, 1, strlen($name)-1);
@@ -87,7 +104,20 @@ echo "<b><i><font size=4 face=Georgia color=000066>Average User Rating: $average
 }
 }
 echo "<hr/>";
-echo "<b><font size=5 face=Georgia color=000066>You may also like: </font></b><br/>";
+
+$influences=array("Fast Food", "Steakhouse", "American", "Middle Eastern", "Asian", "Italian", "Chinese", "Japanese", "Indian", "French", "Greek", "Mexican", "Vegetarian", "Seafood");
+$influenceNums=array($fastFood, $steak, $american, $middleEastern, $asian, $italian, $chinese, $japanese, $indian, $french, $greek, $mexican, $veg, $sea);
+echo "<b>Major Influences:</b><br/>";
+for($i=0; $i<15; $i++)
+{
+	if($influenceNums[$i] > 2)
+	{
+		echo "$influences[$i] ($influenceNums[$i]) <br/>";
+	}
+}
+
+
+echo "<br/> <b><font size=5 face=Georgia color=000066>You may also like: </font></b><br/>";
 
 $k = 0;
 
@@ -214,15 +244,15 @@ for($n=0; $n<$numOfRestaurants; ++$n)
 }
 
 echo "<hr></hr>";
-echo "<b><font size=3 face=Georgia color=000066>Calculated Distances:</b></font><br/>";
+//echo "<b><font size=3 face=Georgia color=000066>Calculated Distances:</b></font><br/>";
 
-for($n=0; $n<$numOfRestaurants; ++$n)
-{
-	if($n != $k)
-	{
-		echo "<i><font size=3 face=Georgia color=cc6600>{$distances[$n][0]} = {$distances[$n][1]}<br/></font>";
-	}
-}
+//for($n=0; $n<$numOfRestaurants; ++$n)
+//{
+	//if($n != $k)
+	//{
+		//echo "<i><font size=3 face=Georgia color=cc6600>{$distances[$n][0]} = {$distances[$n][1]}<br/></font>";
+	//}
+//}
 
 
 }
