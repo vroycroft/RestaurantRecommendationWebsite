@@ -357,7 +357,7 @@ $distToCompare = $userDistances[$n][1];
 				or die("Error Querying Database");
 
 			$numOfRatings = mysqli_num_rows($result);
-			echo "numRatings $numOfRatings";
+			//echo "numRatings $numOfRatings";
 
 				
 
@@ -371,8 +371,8 @@ $distToCompare = $userDistances[$n][1];
 					$row = mysqli_fetch_array($result);
 					$rating = $row['rating'];
 					$restID = $row['restaurant_id'];
-					echo "rating: $rating";
-					echo "restID: $restID";
+					//echo "rating: $rating";
+					//echo "restID: $restID";
 					
 					if($rating > $maxRating)
 					{
