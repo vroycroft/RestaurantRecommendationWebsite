@@ -334,15 +334,15 @@ $distToCompare = $userDistances[$n][1];
 
 
 echo "<hr></hr>";
-echo "<h2><b><font color=000066>Calculated Distances:</h2></font></b>";
+//echo "<h2><b><font color=000066>Calculated Distances:</h2></font></b>";
 
-for($n=0; $n<$numOfUsers; ++$n)
-{
-	if($userDistances[$n][0] != $username)
-	{
-		echo "</b><i><font color=cc6600>{$userDistances[$n][0]} = {$userDistances[$n][1]}</font></i><br/>";
-	}
-}
+//for($n=0; $n<$numOfUsers; ++$n)
+//{
+//	if($userDistances[$n][0] != $username)
+//	{
+//		echo "</b><i><font color=cc6600>{$userDistances[$n][0]} = {$userDistances[$n][1]}</font></i><br/>";
+//	}
+//}
 
 	
 }
