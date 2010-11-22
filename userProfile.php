@@ -336,7 +336,7 @@ $distToCompare = $userDistances[$n][1];
 			$numOfClosest++;
 		}
 	}
-echo "numOfClosest: $numOfClosest";
+//echo "numOfClosest: $numOfClosest";
 
 	for($v = 0; $v<$numOfClosest; ++$v)
 	{	
@@ -388,7 +388,7 @@ echo "numOfClosest: $numOfClosest";
 		}
 	}
 
-	echo "Max rating: $maxRating";
+	//echo "Max rating: $maxRating";
 
 	for($v = 0; $v<$numOfClosest; ++$v)
 	{
