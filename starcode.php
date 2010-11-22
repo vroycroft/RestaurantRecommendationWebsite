@@ -131,7 +131,7 @@ if ($checkexist == 0) {
             <input type=hidden name=\"rating\">");
 
 } else {
-            echo("<b>You already rated this restaurant:</b>");
+            echo("<b>You already rated this restaurant</b>");
 }
 
 ?>
