@@ -46,7 +46,7 @@ if($sss >= 1)
 
 //averaging rating 
 
-  $qur1 = "select count(*) as dd, avg(rating) as xx from userratings where restaurant_id='$restaurant_id' group by restaurant_id";
+  $qur1 = "select count(*) as dd, avg(rating) as xx from UserRatings where restaurant_id='$restaurant_id' group by restaurant_id";
   $result1 = mysql_query($qur1,$link) or die(mysql_error());
   if($line = @mysql_fetch_array($result1, MYSQL_ASSOC))
   {

@@ -28,7 +28,7 @@ if (!isset($restaurant_id) || !is_numeric($restaurant_id)) {
 	$dbcon = mysql_select_db('Restaurants');
   }
 
-   $res  = mysql_query("select restaurant_id from userratings where user_id='".$_SESSION['user_id']."' && restaurant_id='$restaurant_id'");
+   $res  = mysql_query("select restaurant_id from UserRatings where user_id='".$_SESSION['user_id']."' && restaurant_id='$restaurant_id'");
    $dd = mysql_fetch_array($res,MYSQL_BOTH);
    $val = $dd[0];
 
@@ -37,7 +37,7 @@ if (!isset($restaurant_id) || !is_numeric($restaurant_id)) {
    if(!$val && $ser == $host[host])
     {
 	echo"You rating has been accepted and added into the database.<br>Thanks for participating.";
-	$result = mysql_query("insert into userratings (user_id, restaurant_id, rating) values ('".$_SESSION['user_id']."', '$restaurant_id', '$rateval')",$link);
+	$result = mysql_query("insert into UserRatings (user_id, restaurant_id, rating) values ('".$_SESSION['user_id']."', '$restaurant_id', '$rateval')",$link);
     }
    else
     {

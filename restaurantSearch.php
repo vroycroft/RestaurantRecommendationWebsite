@@ -40,9 +40,18 @@ $restaurantVectors[$i] = mysqli_fetch_array($result);
 
 }
 
+if (isset($_GET['restaurant_id']) && is_numeric($_GET['restaurant_id'])) {
+
+	$query = "SELECT * FROM $table WHERE 
+		restaurant_id=".$_GET['restaurant_id']." ORDER BY name;";
+
+} else {
+
 	$restaurantSearched = mysqli_real_escape_string($db, trim($_POST['searchRestaurant'])); 
 	$query = "SELECT * FROM $table WHERE 
 		name LIKE '%$restaurantSearched%' ORDER BY name;";
+
+}
 
 	$result = mysqli_query($db, $query) 
 		or die("Error Querying Database"); 
@@ -98,8 +107,15 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_id']>0) {
 	include("starcode.php");
 } else {
 
+  $qur1 = "select avg(rating) as xx from UserRatings where restaurant_id='".$row['restaurant_id']."' group by restaurant_id";
+  $result1 = mysqli_query($db,$qur1);
+  if($res1 = mysqli_fetch_array($result1))
+  {
+	$rating = $res1['xx'];
+  }
+
 echo "<br/>";
-echo "<b><i><font size=4 face=Georgia color=000066>Average User Rating: $average_user_rating </b></i><br/><br/>";
+echo "<b><i><font size=4 face=Georgia color=000066>Average User Rating: $rating </b></i><br/><br/>";
 
 }
 }
