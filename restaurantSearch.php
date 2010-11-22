@@ -213,16 +213,25 @@ for ($m = 0; $m <$numOfRestaurants; ++$m) {
 
 		
 
-		$totalDistance = abs($restaurantToComparePrice - $restaurantSearchedPrice) + abs($restaurantToCompareDelivery - $restaurantSearchedDelivery) +
-abs($restaurantSearchedTakeOut - $restaurantToCompareTakeOut) + abs($restaurantSearchedGroups - $restaurantToCompareGroups) + abs($restaurantSearchedReservations - $restaurantToCompareReservations) +
-abs($restaurantSearchedOutsideSeating - $restaurantToCompareOutsideSeating) + abs($restaurantSearchedBar - $restaurantToCompareBar) +
-abs($restaurantSearchedKids - $restaurantToCompareKids) + abs($restaurantSearchedFF - $restaurantToCompareFF) + abs($restaurantSearchedSteak - $restaurantToCompareSteak) +
-abs($restaurantSearchedAmer - $restaurantToCompareAmer) + abs($restaurantSearchedME - $restaurantToCompareME) + abs($restaurantSearchedAsian - $restaurantToCompareAsian) +
-abs($restaurantSearchedItal - $restaurantToCompareItal)+ abs($restaurantSearchedChin - $restaurantToCompareChin) + abs($restaurantSearchedJap - $restaurantToCompareJap) +
-abs($restaurantSearchedIndian - $restaurantToCompareIndian) + abs($restaurantSearchedFrench - $restaurantToCompareFrench) +
-abs($restaurantSearchedGreek - $restaurantToCompareGreek) + abs($restaurantSearchedMex - $restaurantToCompareMex) + abs($restaurantSearchedVeg - $restaurantToCompareVeg) +
-abs($restaurantSearchedSeaFood - $restaurantToCompareSeaFood);
+//		$totalDistance = abs($restaurantToComparePrice - $restaurantSearchedPrice) + abs($restaurantToCompareDelivery - $restaurantSearchedDelivery) +
+//abs($restaurantSearchedTakeOut - $restaurantToCompareTakeOut) + abs($restaurantSearchedGroups - $restaurantToCompareGroups) + abs($restaurantSearchedReservations - $restaurantToCompareReservations) +
+//abs($restaurantSearchedOutsideSeating - $restaurantToCompareOutsideSeating) + abs($restaurantSearchedBar - $restaurantToCompareBar) +
+//abs($restaurantSearchedKids - $restaurantToCompareKids) + abs($restaurantSearchedFF - $restaurantToCompareFF) + abs($restaurantSearchedSteak - $restaurantToCompareSteak) +
+//abs($restaurantSearchedAmer - $restaurantToCompareAmer) + abs($restaurantSearchedME - $restaurantToCompareME) + abs($restaurantSearchedAsian - $restaurantToCompareAsian) +
+//abs($restaurantSearchedItal - $restaurantToCompareItal)+ abs($restaurantSearchedChin - $restaurantToCompareChin) + abs($restaurantSearchedJap - $restaurantToCompareJap) +
+//abs($restaurantSearchedIndian - $restaurantToCompareIndian) + abs($restaurantSearchedFrench - $restaurantToCompareFrench) +
+//abs($restaurantSearchedGreek - $restaurantToCompareGreek) + abs($restaurantSearchedMex - $restaurantToCompareMex) + abs($restaurantSearchedVeg - $restaurantToCompareVeg) +
+//abs($restaurantSearchedSeaFood - $restaurantToCompareSeaFood);
 
+		$totalDistance = sqrt(pow($restaurantToComparePrice - $restaurantSearchedPrice,2) + pow($restaurantToCompareDelivery - $restaurantSearchedDelivery, 2) +
+  pow($restaurantSearchedTakeOut - $restaurantToCompareTakeOut, 2) + pow($restaurantSearchedGroups - $restaurantToCompareGroups, 2) + pow($restaurantSearchedReservations - $restaurantToCompareReservations, 2) +
+  pow($restaurantSearchedOutsideSeating - $restaurantToCompareOutsideSeating, 2) + pow($restaurantSearchedBar - $restaurantToCompareBar, 2) +
+  pow($restaurantSearchedKids - $restaurantToCompareKids, 2) + pow($restaurantSearchedFF - $restaurantToCompareFF, 2) + pow($restaurantSearchedSteak - $restaurantToCompareSteak, 2) +
+  pow($restaurantSearchedAmer - $restaurantToCompareAmer, 2) + pow($restaurantSearchedME - $restaurantToCompareME, 2) + pow($restaurantSearchedAsian - $restaurantToCompareAsian, 2) +
+  pow($restaurantSearchedItal - $restaurantToCompareItal, 2)+ pow($restaurantSearchedChin - $restaurantToCompareChin, 2) + pow($restaurantSearchedJap - $restaurantToCompareJap, 2) +
+  pow($restaurantSearchedIndian - $restaurantToCompareIndian, 2) + pow($restaurantSearchedFrench - $restaurantToCompareFrench, 2) +
+  pow($restaurantSearchedGreek - $restaurantToCompareGreek, 2) + pow($restaurantSearchedMex - $restaurantToCompareMex, 2) + pow($restaurantSearchedVeg - $restaurantToCompareVeg, 2) +
+  pow($restaurantSearchedSeaFood - $restaurantToCompareSeaFood, 2));
 $distances[$m][0] = $restaurantToCompareName;
 $distances[$m][1] = $totalDistance;
 
