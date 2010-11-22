@@ -112,6 +112,7 @@ INSERT INTO `Restaurants`.`RestaurantInfo` (`name`, `street_address`, `city`, `s
 
 CREATE TABLE IF NOT EXISTS `Restaurants`.`Users` (
   `user_id` smallint(6) NOT NULL AUTO_INCREMENT,
+  `admin` INT NOT NULL default 0,
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `username` varchar(25) NOT NULL,
