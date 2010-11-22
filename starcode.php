@@ -116,13 +116,25 @@ if($sss >= 1)
 
    <tr>
       <td align=center>
-            <b>Rate this restaurant:</b> 
-            <img name=i1 class=star onmouseover="selstar(1)" onmouseout="remstar(1)" onclick="setrate(1)" src="star1.gif">
-            <img name=i2 class=star onmouseover="selstar(2)" onmouseout="remstar(2)" onclick="setrate(2)" src="star1.gif">
-            <img name=i3 class=star onmouseover="selstar(3)" onmouseout="remstar(3)" onclick="setrate(3)" src="star1.gif">
-            <img name=i4 class=star onmouseover="selstar(4)" onmouseout="remstar(4)" onclick="setrate(4)" src="star1.gif">
-            <img name=i5 class=star onmouseover="selstar(5)" onmouseout="remstar(5)" onclick="setrate(5)" src="star1.gif">
-            <input type=hidden name="rating">
+<?php
+
+$checkexist = mysql_result(mysql_query("Select count(*) from UserRatings where user_id='".$_SESSION['user_id']."' && restaurant_id='$restaurant_id'"), 0);
+
+if ($checkexist == 0) {
+
+            echo("<b>Rate this restaurant:</b> 
+            <img name=i1 class=star onmouseover=\"selstar(1)\" onmouseout=\"remstar(1)\" onclick=\"setrate(1)\" src=\"star1.gif\">
+            <img name=i2 class=star onmouseover=\"selstar(2)\" onmouseout=\"remstar(2)\" onclick=\"setrate(2)\" src=\"star1.gif\">
+            <img name=i3 class=star onmouseover=\"selstar(3)\" onmouseout=\"remstar(3)\" onclick=\"setrate(3)\" src=\"star1.gif\">
+            <img name=i4 class=star onmouseover=\"selstar(4)\" onmouseout=\"remstar(4)\" onclick=\"setrate(4)\" src=\"star1.gif\">
+            <img name=i5 class=star onmouseover=\"selstar(5)\" onmouseout=\"remstar(5)\" onclick=\"setrate(5)\" src=\"star1.gif\">
+            <input type=hidden name=\"rating\">");
+
+} else {
+            echo("<b>You already rated this restaurant:</b>");
+}
+
+?>
             </form>&nbsp;&nbsp;
         <font color='#0000ff'>
 	<?php 
