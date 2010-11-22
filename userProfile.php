@@ -113,16 +113,26 @@ for ($m = 0; $m <$numOfRestaurants; ++$m) {
 
 		
 
-		$totalDistance = abs($restaurantToComparePrice - $userAnswers[0]['price']) + abs($restaurantToCompareDelivery - $userAnswers[0]['delivery']) +
-abs($restaurantToCompareTakeOut - $userAnswers[0]['takeout']) + abs($restaurantToCompareGroups - $userAnswers[0]['accommodate_groups']) + abs($restaurantToCompareReservations - $userAnswers[0]['reservations']) +
-abs($restaurantToCompareOutsideSeating - $userAnswers[0]['outside_seating']) + abs($restaurantToCompareBar - $userAnswers[0]['bar']) +
-abs($restaurantToCompareKids - $userAnswers[0]['kids']) + abs($restaurantToCompareFF - $userAnswers[0]['fast_food']) + abs($restaurantToCompareSteak - $userAnswers[0]['steakhouse_influence']) +
-abs($restaurantToCompareAmer - $userAnswers[0]['american_influence']) + abs($restaurantToCompareME - $userAnswers[0]['middle_eastern_influence']) + abs($restaurantToCompareAsian - $userAnswers[0]['asian_influence']) +
-abs($restaurantToCompareItal - $userAnswers[0]['italian_influence'])+ abs($restaurantToCompareChin - $userAnswers[0]['chinese_influence']) + abs($restaurantToCompareJap - $userAnswers[0]['japanese_influence']) +
-abs($restaurantToCompareIndian - $userAnswers[0]['indian_influence']) + abs($restaurantToCompareFrench - $userAnswers[0]['french_influence']) +
-abs($restaurantToCompareGreek - $userAnswers[0]['greek_influence']) + abs($restaurantToCompareMex - $userAnswers[0]['mexican_influence']) + abs($restaurantToCompareVeg - $userAnswers[0]['vegetarian_influence']) +
-abs($restaurantToCompareSeaFood - $userAnswers[0]['seafood_influence']);
+//		$totalDistance = abs($restaurantToComparePrice - $userAnswers[0]['price']) + abs($restaurantToCompareDelivery - $userAnswers[0]['delivery']) +
+//abs($restaurantToCompareTakeOut - $userAnswers[0]['takeout']) + abs($restaurantToCompareGroups - $userAnswers[0]['accommodate_groups']) + abs($restaurantToCompareReservations - $userAnswers[0]['reservations']) +
+//abs($restaurantToCompareOutsideSeating - $userAnswers[0]['outside_seating']) + abs($restaurantToCompareBar - $userAnswers[0]['bar']) +
+//abs($restaurantToCompareKids - $userAnswers[0]['kids']) + abs($restaurantToCompareFF - $userAnswers[0]['fast_food']) + abs($restaurantToCompareSteak - $userAnswers[0]['steakhouse_influence']) +
+//abs($restaurantToCompareAmer - $userAnswers[0]['american_influence']) + abs($restaurantToCompareME - $userAnswers[0]['middle_eastern_influence']) + abs($restaurantToCompareAsian - $userAnswers[0]['asian_influence']) +
+//abs($restaurantToCompareItal - $userAnswers[0]['italian_influence'])+ abs($restaurantToCompareChin - $userAnswers[0]['chinese_influence']) + abs($restaurantToCompareJap - $userAnswers[0]['japanese_influence']) +
+//abs($restaurantToCompareIndian - $userAnswers[0]['indian_influence']) + abs($restaurantToCompareFrench - $userAnswers[0]['french_influence']) +
+//abs($restaurantToCompareGreek - $userAnswers[0]['greek_influence']) + abs($restaurantToCompareMex - $userAnswers[0]['mexican_influence']) + abs($restaurantToCompareVeg - $userAnswers[0]['vegetarian_influence']) +
+//abs($restaurantToCompareSeaFood - $userAnswers[0]['seafood_influence']);
 
+
+		$totalDistance = sqrt(pow($restaurantToComparePrice - $userAnswers[0]['price'], 2) + pow($restaurantToCompareDelivery - $userAnswers[0]['delivery'], 2) +
+pow($restaurantToCompareTakeOut - $userAnswers[0]['takeout'], 2) + pow($restaurantToCompareGroups - $userAnswers[0]['accommodate_groups'], 2) + pow($restaurantToCompareReservations - $userAnswers[0]['reservations'], 2) +
+pow($restaurantToCompareOutsideSeating - $userAnswers[0]['outside_seating'], 2) + pow($restaurantToCompareBar - $userAnswers[0]['bar'], 2) +
+pow($restaurantToCompareKids - $userAnswers[0]['kids'], 2) + pow($restaurantToCompareFF - $userAnswers[0]['fast_food'], 2) + pow($restaurantToCompareSteak - $userAnswers[0]['steakhouse_influence'], 2) +
+pow($restaurantToCompareAmer - $userAnswers[0]['american_influence'], 2) + pow($restaurantToCompareME - $userAnswers[0]['middle_eastern_influence'], 2) + pow($restaurantToCompareAsian - $userAnswers[0]['asian_influence'], 2) +
+pow($restaurantToCompareItal - $userAnswers[0]['italian_influence'], 2)+ pow($restaurantToCompareChin - $userAnswers[0]['chinese_influence'], 2) + pow($restaurantToCompareJap - $userAnswers[0]['japanese_influence'], 2) +
+pow($restaurantToCompareIndian - $userAnswers[0]['indian_influence'], 2) + pow($restaurantToCompareFrench - $userAnswers[0]['french_influence'], 2) +
+pow($restaurantToCompareGreek - $userAnswers[0]['greek_influence'], 2) + pow($restaurantToCompareMex - $userAnswers[0]['mexican_influence'], 2) + pow($restaurantToCompareVeg - $userAnswers[0]['vegetarian_influence'], 2) +
+pow($restaurantToCompareSeaFood - $userAnswers[0]['seafood_influence'], 2));
 $distances[$m][0] = $restaurantToCompareName;
 $distances[$m][1] = $totalDistance;
 
@@ -255,16 +265,25 @@ $userToCompareLastName = $userVectors[$m]['last_name'];
 
 		
 
-		$totalDistance = abs($userToComparePrice - $userAnswers[0]['price']) + abs($userToCompareDelivery - $userAnswers[0]['delivery']) +
-abs($userToCompareTakeOut - $userAnswers[0]['takeout']) + abs($userToCompareGroups - $userAnswers[0]['accommodate_groups']) + abs($userToCompareReservations - $userAnswers[0]['reservations']) +
-abs($userToCompareOutsideSeating - $userAnswers[0]['outside_seating']) + abs($userToCompareBar - $userAnswers[0]['bar']) +
-abs($userToCompareKids - $userAnswers[0]['kids']) + abs($userToCompareFF - $userAnswers[0]['fast_food']) + abs($userToCompareSteak - $userAnswers[0]['steakhouse_influence']) +
-abs($userToCompareAmer - $userAnswers[0]['american_influence']) + abs($userToCompareME - $userAnswers[0]['middle_eastern_influence']) + abs($userToCompareAsian - $userAnswers[0]['asian_influence']) +
-abs($userToCompareItal - $userAnswers[0]['italian_influence'])+ abs($userToCompareChin - $userAnswers[0]['chinese_influence']) + abs($userToCompareJap - $userAnswers[0]['japanese_influence']) +
-abs($userToCompareIndian - $userAnswers[0]['indian_influence']) + abs($userToCompareFrench - $userAnswers[0]['french_influence']) +
-abs($userToCompareGreek - $userAnswers[0]['greek_influence']) + abs($userToCompareMex - $userAnswers[0]['mexican_influence']) + abs($userToCompareVeg - $userAnswers[0]['vegetarian_influence']) +
-abs($userToCompareSeaFood - $userAnswers[0]['seafood_influence']);
+//		$totalDistance = abs($userToComparePrice - $userAnswers[0]['price']) + abs($userToCompareDelivery - $userAnswers[0]['delivery']) +
+//abs($userToCompareTakeOut - $userAnswers[0]['takeout']) + abs($userToCompareGroups - $userAnswers[0]['accommodate_groups']) + abs($userToCompareReservations - $userAnswers[0]['reservations']) +
+//abs($userToCompareOutsideSeating - $userAnswers[0]['outside_seating']) + abs($userToCompareBar - $userAnswers[0]['bar']) +
+//abs($userToCompareKids - $userAnswers[0]['kids']) + abs($userToCompareFF - $userAnswers[0]['fast_food']) + abs($userToCompareSteak - $userAnswers[0]['steakhouse_influence']) +
+//abs($userToCompareAmer - $userAnswers[0]['american_influence']) + abs($userToCompareME - $userAnswers[0]['middle_eastern_influence']) + abs($userToCompareAsian - $userAnswers[0]['asian_influence']) +
+//abs($userToCompareItal - $userAnswers[0]['italian_influence'])+ abs($userToCompareChin - $userAnswers[0]['chinese_influence']) + abs($userToCompareJap - $userAnswers[0]['japanese_influence']) +
+//abs($userToCompareIndian - $userAnswers[0]['indian_influence']) + abs($userToCompareFrench - $userAnswers[0]['french_influence']) +
+//abs($userToCompareGreek - $userAnswers[0]['greek_influence']) + abs($userToCompareMex - $userAnswers[0]['mexican_influence']) + abs($userToCompareVeg - $userAnswers[0]['vegetarian_influence']) +
+//abs($userToCompareSeaFood - $userAnswers[0]['seafood_influence']);
 
+		$totalDistance = sqrt(pow($userToComparePrice - $userAnswers[0]['price'], 2) + pow($userToCompareDelivery - $userAnswers[0]['delivery'], 2) +
+  pow($userToCompareTakeOut - $userAnswers[0]['takeout'], 2) + pow($userToCompareGroups - $userAnswers[0]['accommodate_groups'], 2) + pow($userToCompareReservations - $userAnswers[0]['reservations'], 2) +
+  pow($userToCompareOutsideSeating - $userAnswers[0]['outside_seating'], 2) + pow($userToCompareBar - $userAnswers[0]['bar'], 2) +
+  pow($userToCompareKids - $userAnswers[0]['kids'], 2) + pow($userToCompareFF - $userAnswers[0]['fast_food'], 2) + pow($userToCompareSteak - $userAnswers[0]['steakhouse_influence'], 2) +
+  pow($userToCompareAmer - $userAnswers[0]['american_influence'], 2) + pow($userToCompareME - $userAnswers[0]['middle_eastern_influence'], 2) + pow($userToCompareAsian - $userAnswers[0]['asian_influence'], 2) +
+  pow($userToCompareItal - $userAnswers[0]['italian_influence'], 2)+ pow($userToCompareChin - $userAnswers[0]['chinese_influence'], 2) + pow($userToCompareJap - $userAnswers[0]['japanese_influence'], 2) +
+  pow($userToCompareIndian - $userAnswers[0]['indian_influence'], 2) + pow($userToCompareFrench - $userAnswers[0]['french_influence'], 2) +
+  pow($userToCompareGreek - $userAnswers[0]['greek_influence'], 2) + pow($userToCompareMex - $userAnswers[0]['mexican_influence'], 2) + pow($userToCompareVeg - $userAnswers[0]['vegetarian_influence'], 2) +
+  pow($userToCompareSeaFood - $userAnswers[0]['seafood_influence'], 2));
 $userDistances[$m][0] = $userToCompareUserName;
 $userDistances[$m][1] = $totalDistance;
 $userDistances[$m][2] = $userToCompareFirstName;
