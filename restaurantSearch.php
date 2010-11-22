@@ -163,7 +163,7 @@ for($j=0; $j<$numOfRestaurants; ++$j) {
 	//echo "nameToCompareTo: $nameToCompareTo";
 	
 
-	if(ucfirst($restaurantSearched) == $restaurantVectors[$j]['name'])
+	if(ucfirst($name) == $restaurantVectors[$j]['name'])
 	{
 		//echo"$restaurantSearched found";
 		//store all the attributes of this restaurant
