@@ -146,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `Restaurants`.`Users` (
 -- Dumping data for table `Users`
 --
 
-INSERT INTO `Restaurants`.`Users` (`first_name`, `last_name`, `username`, `password`, `price`,
+INSERT INTO `Restaurants`.`Users` (`first_name`, `last_name`, `username`, `password`,`admin`, `price`,
   `delivery`,
   `takeout`,
   `accommodate_groups`,
@@ -168,16 +168,16 @@ INSERT INTO `Restaurants`.`Users` (`first_name`, `last_name`, `username`, `passw
   `mexican_influence`,
   `vegetarian_influence`,
   `seafood_influence`) VALUES
-('Vanessa', 'Roycroft', 'vr', SHA('vr'), 2, 1, 1, 0, 0, 1, 0, 0, 2, 5, 5, 2, 3, 5, 5, 5, 3, 1, 1, 4, 1, 3),
-('Gary', 'Mills', 'gm', SHA('gm'), 2, 1, 1, 0, 0, 0, 1, 1, 2, 3, 3, 1, 3, 4, 3, 4, 1, 1, 3, 4, 1, 4),
-('Amy', 'Sams', 'as', SHA('as'), 1, 0, 1, 0, 0, 1, 0, 0, 2, 4, 5, 1, 4, 3, 4, 1, 0, 1, 1, 4, 1, 5),
-('Josh', 'Abbott', 'ja', SHA('ja'), 1, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-('Moe', 'Howard', 'mh', SHA('mh'),    3, 1, 1, 1, 1, 1, 0, 0, 4, 5, 5, 0, 2, 4, 2, 3, 1, 3, 1, 1, 1, 5),
-('Larry', 'Fine', 'lf', SHA('lf'),    2, 1, 0, 1, 0, 1, 1, 0, 2, 2, 3, 4, 1, 5, 3, 1, 1, 1, 3, 2, 1, 5),
-('Curly', 'Howard', 'ch', SHA('ch'),  1, 1, 0, 1, 0, 1, 0, 1, 1, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 1, 2),
-('Homer', 'Simpson', 'hs', SHA('hs'), 1, 1, 0, 1, 0, 0, 1, 0, 2, 5, 5, 0, 0, 3, 4, 1, 0, 1, 1, 4, 0, 3),
-('Marge', 'Simpson', 'ms', SHA('ms'), 3, 1, 1, 0, 1, 0, 0, 0, 5, 1, 5, 0, 3, 3, 4, 1, 0, 1, 1, 2, 5, 4),
-('Bart', 'Simpson', 'bs', SHA('bs'),  1, 1, 0, 0, 0, 1, 0, 1, 5, 2, 5, 0, 2, 1, 1, 1, 0, 1, 1, 2, 0, 0);
+('Vanessa', 'Roycroft', 'vr', SHA('vr'), 1,2, 1, 1, 0, 0, 1, 0, 0, 2, 5, 5, 2, 3, 5, 5, 5, 3, 1, 1, 4, 1, 3),
+('Gary', 'Mills', 'gm', SHA('gm'), 1, 2, 1, 1, 0, 0, 0, 1, 1, 2, 3, 3, 1, 3, 4, 3, 4, 1, 1, 3, 4, 1, 4),
+('Amy', 'Sams', 'as', SHA('as'), 1,1, 0, 1, 0, 0, 1, 0, 0, 2, 4, 5, 1, 4, 3, 4, 1, 0, 1, 1, 4, 1, 5),
+('Josh', 'Abbott', 'ja', SHA('ja'), 1, 1, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
+('Moe', 'Howard', 'mh', SHA('mh'), 0,   3, 1, 1, 1, 1, 1, 0, 0, 4, 5, 5, 0, 2, 4, 2, 3, 1, 3, 1, 1, 1, 5),
+('Larry', 'Fine', 'lf', SHA('lf'), 0,   2, 1, 0, 1, 0, 1, 1, 0, 2, 2, 3, 4, 1, 5, 3, 1, 1, 1, 3, 2, 1, 5),
+('Curly', 'Howard', 'ch', SHA('ch'),0,  1, 1, 0, 1, 0, 1, 0, 1, 1, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 1, 2),
+('Homer', 'Simpson', 'hs', SHA('hs'),0, 1, 1, 0, 1, 0, 0, 1, 0, 2, 5, 5, 0, 0, 3, 4, 1, 0, 1, 1, 4, 0, 3),
+('Marge', 'Simpson', 'ms', SHA('ms'),0, 3, 1, 1, 0, 1, 0, 0, 0, 5, 1, 5, 0, 3, 3, 4, 1, 0, 1, 1, 2, 5, 4),
+('Bart', 'Simpson', 'bs', SHA('bs'), 0, 1, 1, 0, 0, 0, 1, 0, 1, 5, 2, 5, 0, 2, 1, 1, 1, 0, 1, 1, 2, 0, 0);
 
 --
 -- Table structure for table `UserRatings`
