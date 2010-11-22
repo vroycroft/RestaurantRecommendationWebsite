@@ -324,13 +324,117 @@ $distToCompare = $userDistances[$n][1];
 	//echo "numOfRest: $numOfRestaurants";
 }
 
+	$maxRating = 0;
+	$numOfClosest=0;
 	for($n=0; $n<$numOfUsers; ++$n)
 	{
+		
 		if($userDistances[$n][1] == $minDistance)
 		{
 			echo "<h2><i><font color=cc6600>{$userDistances[$n][2]}</font></i></h2>";
+			$closestUsers[$numOfClosest] = $userDistances[$n][0];
+			$numOfClosest++;
 		}
 	}
+echo "numOfClosest: $numOfClosest";
+
+	for($v = 0; $v<$numOfClosest; ++$v)
+	{	
+			//pull all restaurant ratings for this user
+			
+			$query = "SELECT * FROM Users WHERE username = '$closestUsers[$v]';";
+			$result = mysqli_query($db, $query) 
+				or die("Error Querying Database");	
+
+
+				$row = mysqli_fetch_array($result);
+				$userToCompareID = $row['user_id'];
+				//echo "userID $userToCompareID";
+
+			
+			$query = "SELECT * FROM UserRatings WHERE user_id = '$userToCompareID';";
+			$result = mysqli_query($db, $query) 
+				or die("Error Querying Database");
+
+			$numOfRatings = mysqli_num_rows($result);
+			echo "numRatings $numOfRatings";
+
+				
+
+
+			if ($numOfRatings == 0) {
+				//echo "<h1>No results matched your search!</h1>";
+			} else {
+ //echo "yay";
+				
+				for($i=0; $i<$numOfRatings; ++$i) {
+					$row = mysqli_fetch_array($result);
+					$rating = $row['rating'];
+					$restID = $row['restaurant_id'];
+					echo "rating: $rating";
+					echo "restID: $restID";
+					
+					if($rating > $maxRating)
+					{
+						
+						
+						$maxRating = $rating;
+						//$maxRatings[$i][0] = $maxRating;
+						//$maxRatings[0][1] = $restID;
+					}
+				}
+			}
+			
+		}
+	}
+
+	echo "Max rating: $maxRating";
+
+	for($v = 0; $v<$numOfClosest; ++$v)
+	{
+		$query = "SELECT * FROM Users WHERE username = '$closestUsers[$v]';";
+			$result = mysqli_query($db, $query) 
+				or die("Error Querying Database");	
+
+
+				$row = mysqli_fetch_array($result);
+				$userToCompareID = $row['user_id'];
+
+			
+			$query = "SELECT * FROM UserRatings WHERE user_id = '$userToCompareID';";
+			$result = mysqli_query($db, $query) 
+				or die("Error Querying Database");
+
+			$numOfRatings = mysqli_num_rows($result);	
+
+
+			if ($numOfRatings == 0) {
+				//echo "<h1>No results matched your searchlkadsjfklds!</h1>";
+			} else {
+ 
+				
+				for($i=0; $i<$numOfRatings; ++$i) {
+					$row = mysqli_fetch_array($result);
+					$rating = $row['rating'];
+					$restID = $row['restaurant_id'];
+
+					if($rating == $maxRating)
+					{
+						$query = "SELECT * FROM RestaurantInfo WHERE restaurant_id = '$restID';";
+						$result = mysqli_query($db, $query) 
+							or die("Error Querying Database");
+						$row = mysqli_fetch_array($result);
+						$restName = $row['name'];
+			
+						echo "You should try: $restName";
+					}
+				}
+			}
+		}
+	
+
+
+
 
 
 echo "<hr></hr>";
@@ -346,7 +450,7 @@ echo "<hr></hr>";
 
 	
 }
-}
+
 ?>
 			
                 
