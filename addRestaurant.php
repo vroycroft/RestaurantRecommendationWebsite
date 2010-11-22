@@ -2,6 +2,20 @@
 
 include("header.php");
 
+if (!isset($_SESSION['user_id']) || !is_numeric($_SESSION['user_id'])) {
+echo("<p><b>You do not have access to this page.</b></p>");
+exit;
+}
+
+$checkadmin = mysqli_query($db, "Select admin from Users where user_id=".$_SESSION['user_id']);
+$row = mysqli_fetch_array($checkadmin);
+
+$isadmin = $row['admin'];
+if ($isadmin != 1) {
+echo("<p><b>You do not have access to this page.</b></p>");
+exit;
+}
+
 if ($_GET['add'] == "yes") {
 	// Get The Input
 	$name = mysqli_real_escape_string($db, trim($_POST['name']));
