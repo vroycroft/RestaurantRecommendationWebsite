@@ -114,6 +114,11 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_id']>0) {
 	$rating = $res1['xx'];
   }
 
+$rating = round($rating, 1);
+if ($rating <= 0) {
+	$rating = "No Ratings Yet";
+}
+
 echo "<br/>";
 echo "<b><i><font size=4 face=Georgia color=000066>Average User Rating: $rating </b></i><br/><br/>";
 
