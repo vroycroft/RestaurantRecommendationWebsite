@@ -338,7 +338,8 @@ $distToCompare = $userDistances[$n][1];
 	}
 //echo "numOfClosest: $numOfClosest";
 
-$count = 0;
+$restaurantIDs[0] = 0;
+$count = 1;
 
 	$query = "SELECT * FROM UserRatings WHERE user_id = '$user_id';";
 			$result = mysqli_query($db, $query) 
@@ -375,7 +376,7 @@ $count = 0;
 
 
 			if ($numOfRatings == 0) {
-				//echo "<h1>No results matched your search!</h1>";
+				echo "<h1>This user hasn't rating anything yet!</h1>";
 			} else {
  //echo "yay";
 				
@@ -384,22 +385,22 @@ $count = 0;
 					$rating = $row['rating'];
 					$restID = $row['restaurant_id'];
 					
-				  for($j=0; $j<$count; ++$j)
-			    	     {
+				  //for($j=0; $j<$count; ++$j)
+			    	     //{
 				       //echo "restIDs[j]: $restaurantIDs[$j] <br/>";
 					//echo "restID: $restID <br/>";
 				       if(!in_array($restID, $restaurantIDs))
 				       {
-					echo"in 1st if <br/>";
+					//echo"in 1st if <br/>";
 					if($rating > $maxRating)
 					{
 						
-						echo "in 2nd if <br/>";
+						//echo "in 2nd if <br/>";
 						$maxRating = $rating;
 						//$maxRatings[$i][0] = $maxRating;
 						//$maxRatings[0][1] = $restID;
 					}
-				       }
+				       //}
 				      }
 				}
 			}

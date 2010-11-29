@@ -12,7 +12,7 @@ include("header.php");
 <b><p><font size="6.5" face="Georgia" color="000066">R</font><font size="4.5" face="Georgia">estaurants currently in the database:</p></b></font>
 
 <?php
-$query = "SELECT restaurant_id, name FROM $table";
+$query = "SELECT restaurant_id, name FROM $table ORDER BY name";
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
 
