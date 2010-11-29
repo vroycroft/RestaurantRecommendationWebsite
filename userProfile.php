@@ -338,6 +338,18 @@ $distToCompare = $userDistances[$n][1];
 	}
 //echo "numOfClosest: $numOfClosest";
 
+$count = 0;
+
+	$query = "SELECT * FROM UserRatings WHERE user_id = '$user_id';";
+			$result = mysqli_query($db, $query) 
+				or die("Error Querying Database");	
+
+	while($row = mysqli_fetch_array($result)) {
+	$restaurantIDs[$count] = $row['restaurant_id'];
+	//echo "restaurantIDs[count]: $restaurantIDs[$count]";
+	$count++;
+	}
+
 	for($v = 0; $v<$numOfClosest; ++$v)
 	{	
 			//pull all restaurant ratings for this user
@@ -371,17 +383,24 @@ $distToCompare = $userDistances[$n][1];
 					$row = mysqli_fetch_array($result);
 					$rating = $row['rating'];
 					$restID = $row['restaurant_id'];
-					//echo "rating: $rating";
-					//echo "restID: $restID";
 					
+				  for($j=0; $j<$count; ++$j)
+			    	     {
+				       //echo "restIDs[j]: $restaurantIDs[$j] <br/>";
+					//echo "restID: $restID <br/>";
+				       if(!in_array($restID, $restaurantIDs))
+				       {
+					echo"in 1st if <br/>";
 					if($rating > $maxRating)
 					{
 						
-						
+						echo "in 2nd if <br/>";
 						$maxRating = $rating;
 						//$maxRatings[$i][0] = $maxRating;
 						//$maxRatings[0][1] = $restID;
 					}
+				       }
+				      }
 				}
 			}
 			
@@ -389,6 +408,7 @@ $distToCompare = $userDistances[$n][1];
 	}
 
 	//echo "Max rating: $maxRating";
+	
 
 	for($v = 0; $v<$numOfClosest; ++$v)
 	{
@@ -411,13 +431,13 @@ $distToCompare = $userDistances[$n][1];
 			if ($numOfRatings == 0) {
 				//echo "<h1>No results matched your searchlkadsjfklds!</h1>";
 			} else {
- 
-				
+ 			    				
 				for($i=0; $i<$numOfRatings; ++$i) {
 					$row = mysqli_fetch_array($result);
 					$rating = $row['rating'];
 					$restID = $row['restaurant_id'];
-
+				     
+						//echo "
 					if($rating == $maxRating)
 					{
 						$query = "SELECT * FROM RestaurantInfo WHERE restaurant_id = '$restID';";
@@ -426,8 +446,10 @@ $distToCompare = $userDistances[$n][1];
 						$row = mysqli_fetch_array($result);
 						$restName = $row['name'];
 			
-						echo "You should try: $restName";
+						echo "You should try: $restName ($maxRating)";
 					}
+				       
+				      
 				}
 			}
 		}
