@@ -9,6 +9,8 @@ if ($_GET['signup'] == "yes") {
 	$username = mysqli_real_escape_string($db, trim($_POST['username']));
 	$password = mysqli_real_escape_string($db, trim($_POST['password']));
 
+	$price = $_POST[group1];
+
 	$errormess = "";
 
 	// Make Sure All Fields Are Entered
@@ -25,7 +27,7 @@ if ($_GET['signup'] == "yes") {
 
 
 	if ($errormess == "") {
-		@mysqli_query($db, "Insert into `Users` (first_name, last_name, username, password) values ('$first_name', '$last_name', '$username', '$password')");
+		@mysqli_query($db, "Insert into `Users` (first_name, last_name, username, password, price) values ('$first_name', '$last_name', '$username', SHA('$password'), $price)");
 		echo("Account created successfully. <p><a href='login.php'>Login</a> to get started!</p>");
 		include("footer.php");
 		exit;
@@ -34,6 +36,8 @@ if ($_GET['signup'] == "yes") {
 		include("footer.php");
 		exit;
 	}
+
+	
 }
 
 ?>
@@ -55,9 +59,9 @@ if ($_GET['signup'] == "yes") {
 
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td align="left">How much do you prefer spending per person (on average)?</td></tr>
-<tr><td align="left"><input type="radio" name="group1" value="Cheap"> Cheap (Up to $10)</td></tr>
-<tr><td align="left"><input type="radio" name="group1" value="Moderate"> Moderate (Up to $30)</td></tr>
-<tr><td align="left"><input type="radio" name="group1" value="Expensive"> Expensive (Up to $60)</td></tr>
+<tr><td align="left"><input type="radio" name="group1" value="1"> Cheap (Up to $10)</td></tr>
+<tr><td align="left"><input type="radio" name="group1" value="2"> Moderate (Up to $30)</td></tr>
+<tr><td align="left"><input type="radio" name="group1" value="3"> Expensive (Up to $60)</td></tr>
 
 
 <tr><td align="left">Do you prefer a restaurant that offers delivery?</td></tr>
