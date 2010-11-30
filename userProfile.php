@@ -362,6 +362,7 @@ $count = 1;
 
 				$row = mysqli_fetch_array($result);
 				$userToCompareID = $row['user_id'];
+				$userToCompareName = $row['first_name'];
 				//echo "userID $userToCompareID";
 
 			
@@ -376,7 +377,7 @@ $count = 1;
 
 
 			if ($numOfRatings == 0) {
-				echo "<h1>This user hasn't rating anything yet!</h1>";
+				echo "<h1>$userToCompareName hasn't rating anything yet!</h1>";
 			} else {
  //echo "yay";
 				
