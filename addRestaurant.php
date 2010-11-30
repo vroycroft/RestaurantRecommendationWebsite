@@ -24,7 +24,7 @@ if ($_GET['add'] == "yes") {
 	$state = mysqli_real_escape_string($db, trim($_POST['state']));
 	$zip = mysqli_real_escape_string($db, trim($_POST['zip']));
 	$image = mysqli_real_escape_string($db, trim($_POST['image']));
-	$average_user_rating = mysqli_real_escape_string($db, trim($_POST['average_user_rating']));
+	//$average_user_rating = mysqli_real_escape_string($db, trim($_POST['average_user_rating']));
 	$website = mysqli_real_escape_string($db, trim($_POST['website']));
 	$price = mysqli_real_escape_string($db, trim($_POST['price']));
 	$delivery = mysqli_real_escape_string($db, trim($_POST['delivery']));
@@ -59,7 +59,7 @@ if ($_GET['add'] == "yes") {
 
 
 	if ($errormess == "") {
-		@mysqli_query($db, "Insert into `restaurantinfo` (name, street_address, city, state, zip, image, average_user_rating, website, price, delivery, takeout, accommodate_groups, reservations, outside_seating, bar, kids, fast_food, steakhouse_influence, american_influence, middle_eastern_influence, asian_influence, italian_influence, chinese_influence, japanese_influence, indian_influence, french_influence, greek_influence, mexican_influence, vegetarian_influence, seafood_influence) values ('$name', '$street_address', '$city', '$state', '$zip', '$image', '$average_user_rating', '$website', $price, $delivery, $takeout, $accommodate_groups, $reservations, $outside_seating, $bar, $kids, $fast_food, $steakhouse_influence, $american_influence, $middle_eastern_influence, $asian_influence, $italian_influence, $chinese_influence, $japanese_influence, $indian_influence, $french_influence, $greek_influence, $mexican_influence, $vegetarian_influence, $seafood_influence)");
+		@mysqli_query($db, "Insert into `restaurantinfo` (name, street_address, city, state, zip, image, website, price, delivery, takeout, accommodate_groups, reservations, outside_seating, bar, kids, fast_food, steakhouse_influence, american_influence, middle_eastern_influence, asian_influence, italian_influence, chinese_influence, japanese_influence, indian_influence, french_influence, greek_influence, mexican_influence, vegetarian_influence, seafood_influence) values ('$name', '$street_address', '$city', '$state', '$zip', '$image', '$website', $price, $delivery, $takeout, $accommodate_groups, $reservations, $outside_seating, $bar, $kids, $fast_food, $steakhouse_influence, $american_influence, $middle_eastern_influence, $asian_influence, $italian_influence, $chinese_influence, $japanese_influence, $indian_influence, $french_influence, $greek_influence, $mexican_influence, $vegetarian_influence, $seafood_influence)");
 		echo("Restaurant added successfully.");
 		include("footer.php");
 		exit;
@@ -98,7 +98,7 @@ while (list($key, $fieldname) = each($fields)) {
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-</center>");
+</center>
 
 <?php
 include("footer.php");
