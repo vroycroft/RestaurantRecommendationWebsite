@@ -80,7 +80,7 @@ if ($_GET['add'] == "yes") {
 
 <?php
 
-$fields = array("name", "street_address", "city", "state", "zip", "image", "average_user_rating", "website", "price", "delivery", "takeout", "accommodate_groups", "reservations", "outside_seating", "bar", "kids", "fast_food", "steakhouse_influence", "american_influence", "middle_eastern_influence", "asian_influence", "italian_influence", "chinese_influence", "japanese_influence", "indian_influence", "french_influence", "greek_influence", "mexican_influence", "vegetarian_influence", "seafood_influence");
+$fields = array("name", "street_address", "city", "state", "zip", "image", "website", "price", "delivery", "takeout", "accommodate_groups", "reservations", "outside_seating", "bar", "kids", "fast_food", "steakhouse_influence", "american_influence", "middle_eastern_influence", "asian_influence", "italian_influence", "chinese_influence", "japanese_influence", "indian_influence", "french_influence", "greek_influence", "mexican_influence", "vegetarian_influence", "seafood_influence");
 
 while (list($key, $fieldname) = each($fields)) {
 	echo("<tr><td align=\"right\"><b>$fieldname: </b></td><td align=\"left\"><input type=\"text\" name=\"$fieldname\" value=\"0\"></td</tr>");
