@@ -124,8 +124,9 @@ echo "<b><i><font size=4 face=Georgia color=000066>Average User Rating: $rating 
 
 }
 }
-
+echo "<hr/><b><i><font size=4 face=Georgia color=000066>";
 echo "Price: ";
+echo "<b><i><font size=4 face=Georgia color=cc6600>";
 if($price == 1)
 {
 	echo "\$ <br/>";
@@ -143,21 +144,23 @@ else
 	echo "\$$$$ <br/>";
 }
 
+echo "</b></b></i></i></font></font>";
 echo "<hr/>";
 
 $influences=array("Fast Food", "Steakhouse", "American", "Middle Eastern", "Asian", "Italian", "Chinese", "Japanese", "Indian", "French", "Greek", "Mexican", "Vegetarian", "Seafood");
 $influenceNums=array($fastFood, $steak, $american, $middleEastern, $asian, $italian, $chinese, $japanese, $indian, $french, $greek, $mexican, $veg, $sea);
-echo "<b>Major Influences:</b><br/>";
+echo "<font size=4 face=Georgia color=000066><b>Major Influences:</b><br/>";
 for($i=0; $i<15; $i++)
 {
 	if($influenceNums[$i] > 2)
 	{
-		echo "$influences[$i] ($influenceNums[$i]) <br/>";
+		echo "<i><font size=4 face=Georgia color=cc6600>$influences[$i] ($influenceNums[$i]) </i><br/></font>";
 	}
 }
 
+echo "<hr/>";
 
-echo "<br/> <b><font size=5 face=Georgia color=000066>You may also like: </font></b><br/>";
+echo "<b><font size=5 face=Georgia color=000066>You may also like: </font></b><br/>";
 
 $k = 0;
 
@@ -292,7 +295,7 @@ for($n=0; $n<$numOfRestaurants; ++$n)
 	}
 }
 
-echo "<hr></hr>";
+//echo "<hr></hr>";
 //echo "<b><font size=3 face=Georgia color=000066>Calculated Distances:</b></font><br/>";
 
 //for($n=0; $n<$numOfRestaurants; ++$n)
