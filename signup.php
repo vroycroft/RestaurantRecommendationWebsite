@@ -38,14 +38,14 @@ if ($_GET['signup'] == "yes") {
 
 	// Make Sure All Fields Are Entered
 	if ($first_name == "" || $last_name == "" || $username == "" || $password == "" || $price == "" || $delivery == "" || $takeout == "" || $groups == "" || $reservations == "" || $outsideSeating == "" || $bar == "" || $kids == "" || $speed == "" || $steakhouse == "" || $american == "" || $middleEastern == "" || $asian == "" || $italian == "" || $chinese == "" || $japanese == "" || $indian == "" || $french == "" || $greek == "" || $mexican == "" || $vegetarian == "" || $seafood == "") {
-		$errormess = "Your must fill in all the fields";
+		$errormess = "<b><font size=3 face=Georgia color=black>Your must fill in all the fields.</b></font>";
 	}
 
 	// Check If username Exists
 	$checkexists = mysqli_query($db, "Select COUNT(*) AS num from `Users` where username='$username'");
 	$exists = mysqli_fetch_array($checkexists);
 	if ($exists['num'] > 0) {
-		$errormess = "Your username is already registered";
+		$errormess = "<b><font size=3 face=Georgia color=black>Your username is already registered.</b></font>";
 	}
 
 
@@ -80,49 +80,52 @@ if ($_GET['signup'] == "yes") {
 <b><p><i><font size="5.5" face="Georgia" color="000066">S</font><font size="4.5" face="Georgia">urvey:</p></b></i></font>
 </center>
 
+<font size="2" face="Georgia" color="black">
+
 <table border="0" cellpadding="0" cellspacing="0">
-<tr><td align="left">How much do you prefer spending per person (on average)?</td></tr>
+
+<tr><td align="left"><b>How much do you prefer spending per person (on average)?</b></td></tr>
 <tr><td align="left"><input type="radio" name="group1" value="1"> Cheap (Up to $10)</td></tr>
 <tr><td align="left"><input type="radio" name="group1" value="2"> Moderate (Up to $30)</td></tr>
 <tr><td align="left"><input type="radio" name="group1" value="3"> Expensive (Up to $60)</td></tr>
 
 
-<tr><td align="left">Do you prefer a restaurant that offers delivery?</td></tr>
+<tr><td align="left"><b>Do you prefer a restaurant that offers delivery?</b></td></tr>
 <tr><td align="left"><input type="radio" name="group2" value="1"> Yes </td></tr>
 <tr><td align="left"><input type="radio" name="group2" value="0"> No </td></tr>
 
-<tr><td align="left">Do you prefer a restaurant that offers takeout?</td></tr>
+<tr><td align="left"><b>Do you prefer a restaurant that offers takeout?</b></td></tr>
 <tr><td align="left"><input type="radio" name="group3" value="1"> Yes </td></tr>
 <tr><td align="left"><input type="radio" name="group3" value="0"> No </td></tr>
 
-<tr><td align="left">Do you prefer a restaurant that can accommodate groups?</td></tr>
+<tr><td align="left"><b>Do you prefer a restaurant that can accommodate groups?</b></td></tr>
 <tr><td align="left"><input type="radio" name="group4" value="1"> Yes </td></tr>
 <tr><td align="left"><input type="radio" name="group4" value="0"> No </td></tr>
 
-<tr><td align="left">Do you prefer a restaurant that accepts reservations?</td></tr>
+<tr><td align="left"><b>Do you prefer a restaurant that accepts reservations?</b></td></tr>
 <tr><td align="left"><input type="radio" name="group5" value="1"> Yes </td></tr>
 <tr><td align="left"><input type="radio" name="group5" value="0"> No </td></tr>
 
-<tr><td align="left">Do you prefer a restaurant that has outside seating?</td></tr>
+<tr><td align="left"><b>Do you prefer a restaurant that has outside seating?</b></td></tr>
 <tr><td align="left"><input type="radio" name="group6" value="1"> Yes </td></tr>
 <tr><td align="left"><input type="radio" name="group6" value="0"> No </td></tr>
 
-<tr><td align="left">Do you prefer a restaurant that has a full bar?</td></tr>
+<tr><td align="left"><b>Do you prefer a restaurant that has a full bar?</b></td></tr>
 <tr><td align="left"><input type="radio" name="group7" value="1"> Yes </td></tr>
 <tr><td align="left"><input type="radio" name="group7" value="0"> No </td></tr>
 
-<tr><td align="left">Do you prefer a restaurant that is good for kids?</td></tr>
+<tr><td align="left"><b>Do you prefer a restaurant that is good for kids?</b></td></tr>
 <tr><td align="left"><input type="radio" name="group8" value="1"> Yes </td></tr>
 <tr><td align="left"><input type="radio" name="group8" value="0"> No </td></tr>
 
-<tr><td align="left">On a scale of 1 to 5, how fast do you want your service to be?</td></tr>
+<tr><td align="left"><b>On a scale of 1 to 5, how fast do you want your service to be?</b></td></tr>
 <tr><td align="left"><input type="radio" name="group9" value="1"> 1 (Sluggish) </td></tr>
 <tr><td align="left"><input type="radio" name="group9" value="2"> 2 </td></tr>
 <tr><td align="left"><input type="radio" name="group9" value="3"> 3 (Moderate)</td></tr>
 <tr><td align="left"><input type="radio" name="group9" value="4"> 4 </td></tr>
 <tr><td align="left"><input type="radio" name="group9" value="5"> 5 (Super fast)</td></tr>
 <tr> </tr><tr> </tr>
-<tr><td align="left">On a scale of 1 to 5, how much do you prefer this type of restaurant?</tr>
+<tr><td align="left"><b>On a scale of 1 to 5, how much do you prefer this type of restaurant?</b></tr>
 <tr><td align="center"><b>Steakhouse</b></td></tr>
 <tr><td align="center"><input type="radio" name="group10" value="1"> 1 </td></tr>
 <tr><td align="center"><input type="radio" name="group10" value="2"> 2 </td></tr>
