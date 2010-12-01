@@ -448,7 +448,7 @@ echo("<hr/>");
 						$row = mysqli_fetch_array($result);
 						$restName = $row['name'];
 			
-						echo "<font size=4 face=Georgia color=000066>You should try: $restName ($maxRating)</font>";
+						echo "<font size=4 face=Georgia color=000066>You should try: $restName ($maxRating)</font><br/>";
 					}
 				       
 				      
