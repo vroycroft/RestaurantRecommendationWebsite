@@ -56,7 +56,7 @@ if($sss >= 1)
 
 ?>
 
-<table width=75% cellpadding=0 cellspacing=0 border=0 style="font-family: arial, verdana, san-serif; font-size: 13px;">
+<table width=75% cellpadding=0 cellspacing=0 border=0 style="font-family: georgia; font-size: 13px;">
    <tr align=center>
       <td>
         <form name=rate method=post target=\"_blank\" action="starrating.php?restaurant_id=<?php echo($restaurant_id); ?>">
@@ -131,14 +131,14 @@ if ($checkexist == 0) {
             <input type=hidden name=\"rating\">");
 
 } else {
-            echo("<b>You already rated this restaurant</b>");
+            echo("<b>You already rated this restaurant.</b>");
 }
 
 ?>
             </form>&nbsp;&nbsp;
-        <font color='#0000ff'>
+        <font color='000066' face=Georgia>
 	<?php 
-	 echo "[&nbsp;$count&nbsp; <span style='font-size: 12px;'>votes</span>]";
+	 echo "[&nbsp;$count&nbsp; <span style='font-size: 12px; font-family: georgia'>votes</span>]";
 	?>
 	</font>
       </td>
@@ -146,7 +146,7 @@ if ($checkexist == 0) {
 
     <tr>
       <td align=right>
-	 <a style="color: blue; font-size: 10px; text-decoration: none; " id=dum href="http://www.hscripts.com">&copy; hscripts.com</a>
+	 <a style="color: 000066; font-size: 10px; text-decoration: none; font-family: georgia " id=dum href="http://www.hscripts.com">&copy; hscripts.com</a>
       </td>
     </tr>
 </table>
