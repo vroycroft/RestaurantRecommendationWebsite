@@ -350,7 +350,7 @@ $count = 1;
 	//echo "restaurantIDs[count]: $restaurantIDs[$count]";
 	$count++;
 	}
-
+echo("<hr/>");
 	for($v = 0; $v<$numOfClosest; ++$v)
 	{	
 			//pull all restaurant ratings for this user
@@ -377,9 +377,9 @@ $count = 1;
 
 
 			if ($numOfRatings == 0) {
-				echo "<h1>$userToCompareName hasn't rating anything yet!</h1>";
+				echo "<font size=4 face=Georgia color=000066>$userToCompareName hasn't rating anything yet!</font><br/>";
 			} else {
- //echo "yay";
+ 
 				
 				for($i=0; $i<$numOfRatings; ++$i) {
 					$row = mysqli_fetch_array($result);
@@ -431,7 +431,7 @@ $count = 1;
 
 
 			if ($numOfRatings == 0) {
-				//echo "<h1>No results matched your searchlkadsjfklds!</h1>";
+				//echo "<h1>No results matched your search!</h1>";
 			} else {
  			    				
 				for($i=0; $i<$numOfRatings; ++$i) {
@@ -448,7 +448,7 @@ $count = 1;
 						$row = mysqli_fetch_array($result);
 						$restName = $row['name'];
 			
-						echo "You should try: $restName ($maxRating)";
+						echo "<font size=4 face=Georgia color=000066>You should try: $restName ($maxRating)</font>";
 					}
 				       
 				      
