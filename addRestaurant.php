@@ -2,8 +2,11 @@
 
 include("header.php");
 
+echo("<font size=4.5 face=Georgia color=black>");
+
 if (!isset($_SESSION['user_id']) || !is_numeric($_SESSION['user_id'])) {
-echo("<p><b>You do not have access to this page.</b></p>");
+echo("<p><b>Sorry, but you do not have access to this page!
+            <br/>You are not a registered administrator.</b></p>");
 exit;
 }
 
@@ -12,7 +15,7 @@ $row = mysqli_fetch_array($checkadmin);
 
 $isadmin = $row['admin'];
 if ($isadmin != 1) {
-echo("<p><b>You do not have access to this page.</b></p>");
+echo("<p><b>Sorry, but you do not have access to this page!</b></p>");
 exit;
 }
 
@@ -72,7 +75,7 @@ if ($_GET['add'] == "yes") {
 
 ?>
 <center>
-<p><b>Add A Restaurant</b></p>
+<p><font size=5><b><u>Add A Restaurant</u></b></font></p>
 
 
 <form action="addRestaurant.php?add=yes" method="post">
@@ -92,6 +95,7 @@ while (list($key, $fieldname) = each($fields)) {
 </table>
 </form>
 
+</font>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
