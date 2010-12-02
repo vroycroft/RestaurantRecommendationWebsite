@@ -1,6 +1,13 @@
 <?php
 
+session_start();
+
 include("header.php");
+
+if (!isset($_SESSION['user_id']) || !is_numeric($_SESSION['user_id'])) {
+echo("<p><b>Sorry, but you must login to access to this page!</b></p>");
+exit;
+}
 
 if ($_GET['edit'] == "yes") {
 	// Get The Input
@@ -31,8 +38,8 @@ if ($_GET['edit'] == "yes") {
 
 
 	if ($errormess == "") {
-		@mysqli_query($db, "Update `Users` set price=$price, delivery=$delivery, takeout=$takeout, accommodate_groups=$accommodate_groups, reservations=$reservations, outside_seating=$outside_seating, bar=$bar, kids=$kids, fast_food=$fast_food, steakhouse_influence=$steakhouse_influence, american_influence=$american_influence, middle_eastern_influence=$middle_eastern_influence, asian_influence=$asian_influence, italian_influence=$italian_influence, chinese_influence=$chinese_influence, japanese_influence=$japanese_influence, indian_influence=$indian_influence, french_influence=$french_influence, greek_influence=$greek_influence, mexican_influence=$mexican_influence, vegetarian_influence=$vegetarian_influence, seafood_influence=$seafood_influence where where user_id='".$_SESSION['user_id']."'") or die(mysqli_error());
-		echo("<p>Your survey results have been updated!</p>");
+		@mysqli_query($db, "Update `Users` set price=$price, delivery=$delivery, takeout=$takeout, accommodate_groups=$groups, reservations=$reservations, outside_seating=$outsideSeating, bar=$bar, kids=$kids, fast_food=$speed, steakhouse_influence=$steakhouse, american_influence=$american, middle_eastern_influence=$middleEastern, asian_influence=$asian, italian_influence=$italian, chinese_influence=$chinese, japanese_influence=$japanese, indian_influence=$indian, french_influence=$french, greek_influence=$greek, mexican_influence=$mexican, vegetarian_influence=$vegetarian, seafood_influence=$seafood where user_id='".$_SESSION['user_id']."'") or die("You must answer all the questions.");
+		echo("<p>Your survey results have been updated!<br /><br /><a href=\"index.php\">Click Here To Go To The Home Page</a></p>");
 		include("footer.php");
 		exit;
 	} else {

@@ -81,13 +81,14 @@ function hoveroff(cell) {
 
 <?php
 if (isset($_SESSION['user_id']) && $_SESSION['user_id']>0) {
-echo("<tr><td align=center height=50 "); bgtype("logout.php", "login"); echo(">&nbsp;</td></tr>");
+echo("<tr><td align=center height=50 "); bgtype("logout.php", "logout"); echo(">&nbsp;</td></tr>");
 } else {
 echo("<tr><td align=center height=50 "); bgtype("login.php", "login"); echo(">&nbsp;</td></tr>");
 }
 ?>
 
 <tr><td align=center height=50 <?php bgtype("signup.php", "signup"); ?>>&nbsp;</td></tr>
+<tr><td align=center height=50 <?php bgtype("survey.php", "survey"); ?>>&nbsp;</td></tr>
 <tr><td align=center height=50 <?php bgtype("addRestaurant.php", "addrestaurant"); ?>>&nbsp;</td></tr>
 </table>
 <!-- End Main Menu -->
